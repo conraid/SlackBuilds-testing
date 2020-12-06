@@ -1,3 +1,7 @@
+Sun Dec 6 15:59:06 UTC 2020
+php8-memcache-8.0-x86_64-1cf.txz:  Added.
+php8-xdebug-3.0.1-x86_64-1cf.txz:  Upgraded.
++--------------------------+
 Sat Nov 28 11:36:12 UTC 2020
 php8-8.0.0-x86_64-1cf.txz:  Added.
 php8-apcu-5.1.19-x86_64-1cf.txz:  Added.

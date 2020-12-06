@@ -25,6 +25,15 @@ SLACKBUILD DOWNLOAD: https://github.com/Imagick/imagick/archive/c5b8086b5d96c703
 SLACKBUILD MD5SUM: cbcd522202e7b93fb727e510c8c6a50f
 SLACKBUILD SHORT DESCRIPTION:  php-imagick (PHP Wrapper for ImageMagick)
 
+SLACKBUILD NAME: php8-memcache
+SLACKBUILD LOCATION: ./php8-memcache
+SLACKBUILD FILES: README doinst.sh php8-memcache.SlackBuild php8-memcache.info slack-desc
+SLACKBUILD VERSION: 3.1.5
+SLACKBUILD REQUIRED: php8
+SLACKBUILD DOWNLOAD: http://pecl.php.net/get/memcache-8.0.tgz
+SLACKBUILD MD5SUM: eb535a7551aad6bff0d836a4dec9c4fa
+SLACKBUILD SHORT DESCRIPTION:  PHP Memcache
+
 SLACKBUILD NAME: php8-msgpack
 SLACKBUILD LOCATION: ./php8-msgpack
 SLACKBUILD FILES: README doinst.sh php8-msgpack.SlackBuild php8-msgpack.info slack-desc
@@ -73,10 +82,10 @@ SLACKBUILD SHORT DESCRIPTION:  php-stat (A super modern high performance profile
 SLACKBUILD NAME: php8-xdebug
 SLACKBUILD LOCATION: ./php8-xdebug
 SLACKBUILD FILES: README doinst.sh files/xdebug.ini php8-xdebug.SlackBuild php8-xdebug.info slack-desc
-SLACKBUILD VERSION: 3.0.0
+SLACKBUILD VERSION: 3.0.1
 SLACKBUILD REQUIRED: php8 
-SLACKBUILD DOWNLOAD: https://github.com/xdebug/xdebug/archive/3.0.0/xdebug-3.0.0.tar.gz
-SLACKBUILD MD5SUM: 8f3d46ebde42bc232b3f32e8685a1d89
+SLACKBUILD DOWNLOAD: https://github.com/xdebug/xdebug/archive/3.0.1/xdebug-3.0.1.tar.gz
+SLACKBUILD MD5SUM: 82836716a651e2be949c304ac8e895ec
 SLACKBUILD SHORT DESCRIPTION:  php-xdebug (debug extension for php)
 
 SLACKBUILD NAME: php8
