@@ -1,3 +1,19 @@
+Sat Jun 26 12:32:31 UTC 2021
+brave-bin-1.26.67-x86_64-1cf.txz:  Added.
+gsa-21.4.1-x86_64-1cf.txz:  Added.
+gvm-libs-21.4.1-x86_64-1cf.txz:  Added.
+gvm-tools-21.6.1-x86_64-1cf.txz:  Added.
+gvmd-21.4.1-x86_64-1cf.txz:  Added.
+openvas-scanner-21.4.1-x86_64-1cf.txz:  Added.
+ospd-21.4.1-x86_64-1cf.txz:  Added.
+ospd-openvas-21.4.0-x86_64-1cf.txz:  Added.
+pidgin-facebook-0.9.6-x86_64-1cf.txz:  Added.
+pontos-21.6.11-x86_64-1cf.txz:  Added.
+python-gvm-21.6.0-x86_64-1cf.txz:  Added.
++--------------------------+
+Mon Dec 7 15:22:12 UTC 2020
+Moved all to main repository
++--------------------------+
 Sun Dec 6 15:59:06 UTC 2020
 php8-memcache-8.0-x86_64-1cf.txz:  Added.
 php8-xdebug-3.0.1-x86_64-1cf.txz:  Upgraded.

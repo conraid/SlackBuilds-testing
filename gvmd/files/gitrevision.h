@@ -1,0 +1,1 @@
+#define GVMD_GIT_REVISION "12d59a3a-v9.0.0"

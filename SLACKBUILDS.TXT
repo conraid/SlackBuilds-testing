@@ -1,0 +1,99 @@
+SLACKBUILD NAME: brave-bin
+SLACKBUILD LOCATION: ./brave-bin
+SLACKBUILD FILES: README brave-bin.SlackBuild brave-bin.info doinst.sh files/brave-bin.desktop files/brave-bin.sh files/brave.png slack-desc
+SLACKBUILD VERSION: 1.26.67
+SLACKBUILD REQUIRED: 
+SLACKBUILD DOWNLOAD: https://github.com/brave/brave-browser/releases/download/v1.26.67/brave-browser-1.26.67-linux-amd64.zip
+SLACKBUILD MD5SUM: f737abda37b1c118d11b5ce6c99fa7bf
+SLACKBUILD SHORT DESCRIPTION:  brave (Next generation Brave browser)
+
+SLACKBUILD NAME: gsa
+SLACKBUILD LOCATION: ./gsa
+SLACKBUILD FILES: PKGNOTE README SLACKWARE.README doinst.sh files/rc.gsad gsa.SlackBuild gsa.info slack-desc
+SLACKBUILD VERSION: 21.4.1
+SLACKBUILD REQUIRED: libmicrohttpd gvm-libs hiredis redis node babel-loader python-polib xmltoman
+SLACKBUILD DOWNLOAD: https://github.com/greenbone/gsa/archive/v21.4.1/gsa-21.4.1.tar.gz
+SLACKBUILD MD5SUM: b98caaff34ee3bff17438cb627fe8299
+SLACKBUILD SHORT DESCRIPTION:  gsa (greenbone security assistant)
+
+SLACKBUILD NAME: gvm-libs
+SLACKBUILD LOCATION: ./gvm-libs
+SLACKBUILD FILES: README SLACKWARE.README gvm-libs.SlackBuild gvm-libs.info slack-desc
+SLACKBUILD VERSION: 21.4.1
+SLACKBUILD REQUIRED: hiredis redis graphviz libnet xmltoman
+SLACKBUILD DOWNLOAD: https://github.com/greenbone/gvm-libs/archive/v21.4.1/gvm-libs-21.4.1.tar.gz
+SLACKBUILD MD5SUM: 5923849a7b5c054ad042eeceafcff3de
+SLACKBUILD SHORT DESCRIPTION:  gvm-libs (Greenbone Vulnerability Management Libraries )
+
+SLACKBUILD NAME: gvm-tools
+SLACKBUILD LOCATION: ./gvm-tools
+SLACKBUILD FILES: README SLACKWARE.README gvm-tools.SlackBuild gvm-tools.info slack-desc
+SLACKBUILD VERSION: 21.6.1
+SLACKBUILD REQUIRED: gvm-libs python-gvm
+SLACKBUILD DOWNLOAD: https://pypi.python.org/packages/source/g/gvm-tools/gvm-tools-21.6.1.tar.gz
+SLACKBUILD MD5SUM: eb1d4e1d83b0e7c92e03e0413bcb22ca
+SLACKBUILD SHORT DESCRIPTION:  gvm-tools (Greenbone Vulnerability Management Tools)
+
+SLACKBUILD NAME: gvmd
+SLACKBUILD LOCATION: ./gvmd
+SLACKBUILD FILES: README SLACKWARE.README doinst.sh files/gitrevision.h gvmd.SlackBuild gvmd.info rc.gvmd slack-desc
+SLACKBUILD VERSION: 21.4.1
+SLACKBUILD REQUIRED: gvm-libs hiredis redis postgresql
+SLACKBUILD DOWNLOAD: https://github.com/greenbone/gvmd/archive/v21.4.1/gmvd-21.4.1.tar.gz
+SLACKBUILD MD5SUM: 05a738fbb168a5bb307de8cac7499a3c
+SLACKBUILD SHORT DESCRIPTION:  gvmd (Greenbone Vulnerability Manager)
+
+SLACKBUILD NAME: openvas-scanner
+SLACKBUILD LOCATION: ./openvas-scanner
+SLACKBUILD FILES: README SLACKWARE.README doinst.sh files/rc.openvassd openvas-scanner.SlackBuild openvas-scanner.info slack-desc
+SLACKBUILD VERSION: 21.4.1
+SLACKBUILD REQUIRED: gvm-libs hiredis redis
+SLACKBUILD DOWNLOAD: https://github.com/greenbone/openvas/archive/v21.4.1/openvas-scanner-21.4.1.tar.gz
+SLACKBUILD MD5SUM: d0d333a9720f0491a1c34613fcd19f9e
+SLACKBUILD SHORT DESCRIPTION:  openvas-scanner (OpenVAS remote network security scanner)
+
+SLACKBUILD NAME: ospd-openvas
+SLACKBUILD LOCATION: ./ospd-openvas
+SLACKBUILD FILES: README ospd-openvas.SlackBuild ospd-openvas.info slack-desc
+SLACKBUILD VERSION: 21.4.0
+SLACKBUILD REQUIRED: ospd openvas-scanner python-redis
+SLACKBUILD DOWNLOAD: https://pypi.python.org/packages/source/o/ospd-openvas/ospd-openvas-21.4.0.tar.gz
+SLACKBUILD MD5SUM: 4ecbbb1488a1e156298cb29b471bc8af
+SLACKBUILD SHORT DESCRIPTION:  ospd-openvas (osp server to openvas scanner)
+
+SLACKBUILD NAME: ospd
+SLACKBUILD LOCATION: ./ospd
+SLACKBUILD FILES: README SLACKWARE.README ospd.SlackBuild ospd.info slack-desc
+SLACKBUILD VERSION: 21.4.1
+SLACKBUILD REQUIRED: paramiko lxml defusedxml
+SLACKBUILD DOWNLOAD: https://github.com/greenbone/ospd/archive/v21.4.1/ospd-21.4.1.tar.gz
+SLACKBUILD MD5SUM: a9da42acbb8224b214dbd267bbc5608a
+SLACKBUILD SHORT DESCRIPTION:  ospd (Open Scanner Protocol Wrapper)
+
+SLACKBUILD NAME: pidgin-facebook
+SLACKBUILD LOCATION: ./pidgin-facebook
+SLACKBUILD FILES: README pidgin-facebook.SlackBuild pidgin-facebook.info slack-desc
+SLACKBUILD VERSION: 0.9.6
+SLACKBUILD REQUIRED: 
+SLACKBUILD DOWNLOAD: https://github.com/dequis/purple-facebook/releases/download/v0.9.6/purple-facebook-0.9.6.tar.gz
+SLACKBUILD MD5SUM: fe58b39f835fac3e7616c34364d869a9
+SLACKBUILD SHORT DESCRIPTION:  pidgin-facebook (Facebook protocol plugin for libpurple)
+
+SLACKBUILD NAME: pontos
+SLACKBUILD LOCATION: ./pontos
+SLACKBUILD FILES: README pontos.SlackBuild pontos.info slack-desc
+SLACKBUILD VERSION: 21.6.11
+SLACKBUILD REQUIRED: 
+SLACKBUILD DOWNLOAD: https://pypi.python.org/packages/source/p/pontos/pontos-21.6.11.tar.gz
+SLACKBUILD MD5SUM: c3c9af42a5c5a597003cf4261963105a
+SLACKBUILD SHORT DESCRIPTION:  pontos (Greenbone Python Utilities and Tools )
+
+SLACKBUILD NAME: python-gvm
+SLACKBUILD LOCATION: ./python-gvm
+SLACKBUILD FILES: README SLACKWARE.README python-gvm.SlackBuild python-gvm.info slack-desc
+SLACKBUILD VERSION: 21.6.0
+SLACKBUILD REQUIRED: paramiko lxml defusedxml gvm-libs
+SLACKBUILD DOWNLOAD: https://pypi.python.org/packages/source/p/python-gvm/python-gvm-21.6.0.tar.gz
+SLACKBUILD MD5SUM: 8783e6be702809531babdba94b5f129a
+SLACKBUILD SHORT DESCRIPTION:  python-gvm (GVM Python Library)
+
