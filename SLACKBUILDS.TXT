@@ -1,10 +1,10 @@
 SLACKBUILD NAME: brave-bin
 SLACKBUILD LOCATION: ./brave-bin
 SLACKBUILD FILES: README brave-bin.SlackBuild brave-bin.info doinst.sh files/brave-bin.desktop files/brave-bin.sh files/brave.png slack-desc
-SLACKBUILD VERSION: 1.26.67
+SLACKBUILD VERSION: 1.26.74
 SLACKBUILD REQUIRED: 
-SLACKBUILD DOWNLOAD: https://github.com/brave/brave-browser/releases/download/v1.26.67/brave-browser-1.26.67-linux-amd64.zip
-SLACKBUILD MD5SUM: f737abda37b1c118d11b5ce6c99fa7bf
+SLACKBUILD DOWNLOAD: https://github.com/brave/brave-browser/releases/download/v1.26.74/brave-browser-1.26.74-linux-amd64.zip
+SLACKBUILD MD5SUM: 4e0e4bbc23e77ae039620dafd43d5817
 SLACKBUILD SHORT DESCRIPTION:  brave (Next generation Brave browser)
 
 SLACKBUILD NAME: gsa
@@ -37,10 +37,10 @@ SLACKBUILD SHORT DESCRIPTION:  gvm-tools (Greenbone Vulnerability Management Too
 SLACKBUILD NAME: gvmd
 SLACKBUILD LOCATION: ./gvmd
 SLACKBUILD FILES: README SLACKWARE.README doinst.sh files/gitrevision.h gvmd.SlackBuild gvmd.info rc.gvmd slack-desc
-SLACKBUILD VERSION: 21.4.1
+SLACKBUILD VERSION: 21.4.2
 SLACKBUILD REQUIRED: gvm-libs hiredis redis postgresql
-SLACKBUILD DOWNLOAD: https://github.com/greenbone/gvmd/archive/v21.4.1/gmvd-21.4.1.tar.gz
-SLACKBUILD MD5SUM: 05a738fbb168a5bb307de8cac7499a3c
+SLACKBUILD DOWNLOAD: https://github.com/greenbone/gvmd/archive/v21.4.2/gmvd-21.4.2.tar.gz
+SLACKBUILD MD5SUM: 43b5864de832b14b3d5e0862097bc8b5
 SLACKBUILD SHORT DESCRIPTION:  gvmd (Greenbone Vulnerability Manager)
 
 SLACKBUILD NAME: openvas-scanner
@@ -82,10 +82,10 @@ SLACKBUILD SHORT DESCRIPTION:  pidgin-facebook (Facebook protocol plugin for lib
 SLACKBUILD NAME: pontos
 SLACKBUILD LOCATION: ./pontos
 SLACKBUILD FILES: README pontos.SlackBuild pontos.info slack-desc
-SLACKBUILD VERSION: 21.6.11
+SLACKBUILD VERSION: 21.6.12
 SLACKBUILD REQUIRED: 
-SLACKBUILD DOWNLOAD: https://pypi.python.org/packages/source/p/pontos/pontos-21.6.11.tar.gz
-SLACKBUILD MD5SUM: c3c9af42a5c5a597003cf4261963105a
+SLACKBUILD DOWNLOAD: https://pypi.python.org/packages/source/p/pontos/pontos-21.6.12.tar.gz
+SLACKBUILD MD5SUM: de68bcac347482fb65b3f2a2717992cf
 SLACKBUILD SHORT DESCRIPTION:  pontos (Greenbone Python Utilities and Tools )
 
 SLACKBUILD NAME: python-gvm

@@ -1,3 +1,8 @@
+Wed Jun 30 12:34:00 UTC 2021
+brave-bin-1.26.74-x86_64-1cf.txz:  Upgraded.
+gvmd-21.4.2-x86_64-1cf.txz:  Upgraded.
+pontos-21.6.12-x86_64-1cf.txz:  Upgraded.
++--------------------------+
 Sat Jun 26 12:32:31 UTC 2021
 brave-bin-1.26.67-x86_64-1cf.txz:  Added.
 gsa-21.4.1-x86_64-1cf.txz:  Added.
