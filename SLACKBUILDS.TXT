@@ -43,6 +43,15 @@ SLACKBUILD DOWNLOAD: https://github.com/greenbone/gvmd/archive/v21.4.2/gmvd-21.4
 SLACKBUILD MD5SUM: 43b5864de832b14b3d5e0862097bc8b5
 SLACKBUILD SHORT DESCRIPTION:  gvmd (Greenbone Vulnerability Manager)
 
+SLACKBUILD NAME: libdaq
+SLACKBUILD LOCATION: ./libdaq
+SLACKBUILD FILES: README libdaq.SlackBuild libdaq.info slack-desc
+SLACKBUILD VERSION: 3.0.4
+SLACKBUILD REQUIRED: libdnet
+SLACKBUILD DOWNLOAD: https://github.com/snort3/libdaq/archive/v3.0.4/libdaq-3.0.4.tar.gz
+SLACKBUILD MD5SUM: 4b454134d76fa90143a8b04f55f5d33d
+SLACKBUILD SHORT DESCRIPTION:  libdaq (Data Acquisition libary)
+
 SLACKBUILD NAME: openvas-scanner
 SLACKBUILD LOCATION: ./openvas-scanner
 SLACKBUILD FILES: README SLACKWARE.README doinst.sh files/rc.openvassd openvas-scanner.SlackBuild openvas-scanner.info slack-desc
@@ -96,4 +105,31 @@ SLACKBUILD REQUIRED: paramiko lxml defusedxml gvm-libs
 SLACKBUILD DOWNLOAD: https://pypi.python.org/packages/source/p/python-gvm/python-gvm-21.6.0.tar.gz
 SLACKBUILD MD5SUM: 8783e6be702809531babdba94b5f129a
 SLACKBUILD SHORT DESCRIPTION:  python-gvm (GVM Python Library)
+
+SLACKBUILD NAME: snort-openappid
+SLACKBUILD LOCATION: ./snort-openappid
+SLACKBUILD FILES: README slack-desc snort-openappid.SlackBuild snort-openappid.info
+SLACKBUILD VERSION: 17843
+SLACKBUILD REQUIRED: 
+SLACKBUILD DOWNLOAD: https://www.snort.org/downloads/openappid/17843
+SLACKBUILD MD5SUM: d494c0950a1557e3453756eff2b176f3
+SLACKBUILD SHORT DESCRIPTION:  snort-openappid (Open Detector Package)
+
+SLACKBUILD NAME: snort3
+SLACKBUILD LOCATION: ./snort3
+SLACKBUILD FILES: README SLACKWARE.README doinst.sh files/local.lua files/rc.snort rc.snort3 slack-desc snort3.SlackBuild snort3.info
+SLACKBUILD VERSION: 3.1.7.0
+SLACKBUILD REQUIRED: flex flatbuffers libdaq libdnet luajit hwloc hyperscan libsafec snort-openappid
+SLACKBUILD DOWNLOAD: https://github.com/snort3/snort3/archive/3.1.7.0/snort3-3.1.7.0.tar.gz
+SLACKBUILD MD5SUM: 75a1f40d6403adb5edb5739cf0c65b9e
+SLACKBUILD SHORT DESCRIPTION:  snort3 (Intrusion Detection and Prevention System)
+
+SLACKBUILD NAME: snort3_extra
+SLACKBUILD LOCATION: ./snort3_extra
+SLACKBUILD FILES: README SLACKWARE.README doinst.sh slack-desc snort3_extra.SlackBuild snort3_extra.info
+SLACKBUILD VERSION: 3.1.7.0
+SLACKBUILD REQUIRED: snort3
+SLACKBUILD DOWNLOAD: https://github.com/snort3/snort3_extra/archive/3.1.7.0/snort3_extra-3.1.7.0.tar.gz
+SLACKBUILD MD5SUM: 46d21ee0b968c6fed4ea72507ad97f39
+SLACKBUILD SHORT DESCRIPTION:  snort_extra (Snort++ Extras)
 

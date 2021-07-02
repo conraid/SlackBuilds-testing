@@ -3,9 +3,13 @@ gsa/gsa.SlackBuild
 gvm-libs/gvm-libs.SlackBuild
 gvm-tools/gvm-tools.SlackBuild
 gvmd/gvmd.SlackBuild
+libdaq/libdaq.SlackBuild
 openvas-scanner/openvas-scanner.SlackBuild
 ospd-openvas/ospd-openvas.SlackBuild
 ospd/ospd.SlackBuild
 pidgin-facebook/pidgin-facebook.SlackBuild
 pontos/pontos.SlackBuild
 python-gvm/python-gvm.SlackBuild
+snort-openappid/snort-openappid.SlackBuild
+snort3/snort3.SlackBuild
+snort3_extra/snort3_extra.SlackBuild

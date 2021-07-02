@@ -1,3 +1,9 @@
+Fri Jul 2 07:00:35 UTC 2021
+libdaq-3.0.4-x86_64-1cf.txz:  Added.
+snort-openappid-17843-x86_64-1cf.txz:  Added.
+snort3-3.1.7.0-x86_64-1cf.txz:  Added.
+snort3_extra-3.1.7.0-x86_64-1cf.txz:  Added.
++--------------------------+
 Wed Jun 30 12:34:00 UTC 2021
 brave-bin-1.26.74-x86_64-1cf.txz:  Upgraded.
 gvmd-21.4.2-x86_64-1cf.txz:  Upgraded.
