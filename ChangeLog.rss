@@ -11,9 +11,21 @@
       <description>Corrado Franco (Conraid) Slackware current TESTING package repository.</description>
       <language>en-us</language>
       <id xmlns="http://www.w3.org/2005/Atom">urn:uuid:5f918df8-684b-11dd-bffd-0013d49950e2</id>
-      <pubDate>Fri,  2 Jul 2021 07:00:35 UTC</pubDate>
-      <lastBuildDate>Fri,  2 Jul 2021 07:00:44 UTC</lastBuildDate>
+      <pubDate>Wed,  7 Jul 2021 06:20:54 UTC</pubDate>
+      <lastBuildDate>Wed,  7 Jul 2021 06:21:06 UTC</lastBuildDate>
       <generator>gen_repos_files.sh v 1.98</generator>
+      <item>
+         <title>Wed,  7 Jul 2021 06:20:54 UTC</title>
+         <link>http://slack.conraid.net/repository/slackware64-current-testing/ChangeLog.txt</link>
+         <pubDate>Wed,  7 Jul 2021 06:20:54 UTC</pubDate>
+         <guid isPermaLink="false">20210707082054</guid>
+         <description>
+           <![CDATA[<pre>
+ospd-21.4.1-x86_64-1cf.txz:  Upgraded.
+pontos-21.7.1-x86_64-1cf.txz:  Upgraded.
+           </pre>]]>
+         </description>
+      </item>
       <item>
          <title>Fri,  2 Jul 2021 07:00:35 UTC</title>
          <link>http://slack.conraid.net/repository/slackware64-current-testing/ChangeLog.txt</link>
@@ -106,10 +118,10 @@ php8-xdebug-3.0.0-x86_64-1cf.txz:  Added.
          </description>
       </item>
       <item>
-         <title>Fri,  2 Jul 2021 00:00:00 UTC</title>
+         <title>Wed,  7 Jul 2021 00:00:00 UTC</title>
          <link>http://slack.conraid.net/repository/slackware64-current-testing/ChangeLog.txt</link>
-         <pubDate>Fri,  2 Jul 2021 00:00:00 UTC</pubDate>
-         <guid isPermaLink="false">20210702020000</guid>
+         <pubDate>Wed,  7 Jul 2021 00:00:00 UTC</pubDate>
+         <guid isPermaLink="false">20210707020000</guid>
          <description>
            <![CDATA[<pre>
            </pre>]]>

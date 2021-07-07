@@ -1,3 +1,7 @@
+Wed Jul 7 06:20:54 UTC 2021
+ospd-21.4.1-x86_64-1cf.txz:  Upgraded.
+pontos-21.7.1-x86_64-1cf.txz:  Upgraded.
++--------------------------+
 Fri Jul 2 07:00:35 UTC 2021
 libdaq-3.0.4-x86_64-1cf.txz:  Added.
 snort-openappid-17843-x86_64-1cf.txz:  Added.
