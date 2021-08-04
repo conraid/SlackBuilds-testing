@@ -11,9 +11,43 @@
       <description>Corrado Franco (Conraid) Slackware current TESTING package repository.</description>
       <language>en-us</language>
       <id xmlns="http://www.w3.org/2005/Atom">urn:uuid:5f918df8-684b-11dd-bffd-0013d49950e2</id>
-      <pubDate>Wed,  7 Jul 2021 06:20:54 UTC</pubDate>
-      <lastBuildDate>Wed,  7 Jul 2021 06:21:06 UTC</lastBuildDate>
+      <pubDate>Wed,  4 Aug 2021 15:42:22 UTC</pubDate>
+      <lastBuildDate>Wed,  4 Aug 2021 15:42:55 UTC</lastBuildDate>
       <generator>gen_repos_files.sh v 1.98</generator>
+      <item>
+         <title>Wed,  4 Aug 2021 15:42:22 UTC</title>
+         <link>http://slack.conraid.net/repository/slackware64-current-testing/ChangeLog.txt</link>
+         <pubDate>Wed,  4 Aug 2021 15:42:22 UTC</pubDate>
+         <guid isPermaLink="false">20210804174222</guid>
+         <description>
+           <![CDATA[<pre>
+brave-bin-1.27.110-x86_64-1cf.txz:  Upgraded.
+gsa-21.4.2-x86_64-1cf.txz:  Upgraded.
+gvm-libs-21.4.2-x86_64-1cf.txz:  Upgraded.
+gvmd-21.4.3-x86_64-1cf.txz:  Upgraded.
+openvas-scanner-21.4.2-x86_64-1cf.txz:  Upgraded.
+ospd-21.4.3-x86_64-1cf.txz:  Upgraded.
+ospd-openvas-21.4.2-x86_64-1cf.txz:  Upgraded.
+pontos-21.7.4-x86_64-1cf.txz:  Upgraded.
+snort3-3.1.9.0-x86_64-1cf.txz:  Upgraded.
+snort3_extra-3.1.9.0-x86_64-1cf.txz:  Upgraded.
+           </pre>]]>
+         </description>
+      </item>
+      <item>
+         <title>Sat, 17 Jul 2021 08:16:58 UTC</title>
+         <link>http://slack.conraid.net/repository/slackware64-current-testing/ChangeLog.txt</link>
+         <pubDate>Sat, 17 Jul 2021 08:16:58 UTC</pubDate>
+         <guid isPermaLink="false">20210717101658</guid>
+         <description>
+           <![CDATA[<pre>
+brave-bin-1.27.106-x86_64-1cf.txz:  Upgraded.
+pontos-21.7.2-x86_64-1cf.txz:  Upgraded.
+snort3-3.1.8.0-x86_64-1cf.txz:  Upgraded.
+snort3_extra-3.1.8.0-x86_64-1cf.txz:  Upgraded.
+           </pre>]]>
+         </description>
+      </item>
       <item>
          <title>Wed,  7 Jul 2021 06:20:54 UTC</title>
          <link>http://slack.conraid.net/repository/slackware64-current-testing/ChangeLog.txt</link>
@@ -118,10 +152,10 @@ php8-xdebug-3.0.0-x86_64-1cf.txz:  Added.
          </description>
       </item>
       <item>
-         <title>Wed,  7 Jul 2021 00:00:00 UTC</title>
+         <title>Wed,  4 Aug 2021 00:00:00 UTC</title>
          <link>http://slack.conraid.net/repository/slackware64-current-testing/ChangeLog.txt</link>
-         <pubDate>Wed,  7 Jul 2021 00:00:00 UTC</pubDate>
-         <guid isPermaLink="false">20210707020000</guid>
+         <pubDate>Wed,  4 Aug 2021 00:00:00 UTC</pubDate>
+         <guid isPermaLink="false">20210804020000</guid>
          <description>
            <![CDATA[<pre>
            </pre>]]>

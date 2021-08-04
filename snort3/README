@@ -96,5 +96,5 @@ After updating your files, restart snort with:
 
 
 ======================
-REQUIRES: flex flatbuffers libdaq libdnet luajit hwloc hyperscan libsafec snort-openappid
+REQUIRES: flatbuffers libdaq libdnet luajit hwloc hyperscan libsafec snort-openappid
 
