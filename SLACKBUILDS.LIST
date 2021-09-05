@@ -4,6 +4,7 @@ gvm-libs/gvm-libs.SlackBuild
 gvm-tools/gvm-tools.SlackBuild
 gvmd/gvmd.SlackBuild
 libdaq/libdaq.SlackBuild
+mping/mping.SlackBuild
 openvas-scanner/openvas-scanner.SlackBuild
 ospd-openvas/ospd-openvas.SlackBuild
 ospd/ospd.SlackBuild

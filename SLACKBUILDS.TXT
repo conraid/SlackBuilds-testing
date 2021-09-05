@@ -52,6 +52,15 @@ SLACKBUILD DOWNLOAD: https://github.com/snort3/libdaq/archive/v3.0.4/libdaq-3.0.
 SLACKBUILD MD5SUM: 4b454134d76fa90143a8b04f55f5d33d
 SLACKBUILD SHORT DESCRIPTION:  libdaq (Data Acquisition libary)
 
+SLACKBUILD NAME: mping
+SLACKBUILD LOCATION: ./mping
+SLACKBUILD FILES: README mping.SlackBuild mping.info slack-desc
+SLACKBUILD VERSION: 1.5
+SLACKBUILD REQUIRED: 
+SLACKBUILD DOWNLOAD: https://github.com/troglobit/mping//archive/v1.5/mping-1.5.tar.gz
+SLACKBUILD MD5SUM: bb49f70831dc0082c1297c79fb2564c9
+SLACKBUILD SHORT DESCRIPTION:  mping (A simple multicast ping program)
+
 SLACKBUILD NAME: openvas-scanner
 SLACKBUILD LOCATION: ./openvas-scanner
 SLACKBUILD FILES: README SLACKWARE.README doinst.sh files/rc.openvassd openvas-scanner.SlackBuild openvas-scanner.info slack-desc
@@ -118,18 +127,18 @@ SLACKBUILD SHORT DESCRIPTION:  snort-openappid (Open Detector Package)
 SLACKBUILD NAME: snort3
 SLACKBUILD LOCATION: ./snort3
 SLACKBUILD FILES: README SLACKWARE.README doinst.sh files/local.lua files/rc.snort rc.snort3 slack-desc snort3.SlackBuild snort3.info
-SLACKBUILD VERSION: 3.1.9.0
+SLACKBUILD VERSION: 3.1.10.0
 SLACKBUILD REQUIRED: flatbuffers libdaq libdnet luajit hwloc hyperscan libsafec snort-openappid
-SLACKBUILD DOWNLOAD: https://github.com/snort3/snort3/archive/3.1.9.0/snort3-3.1.9.0.tar.gz
-SLACKBUILD MD5SUM: 5c411442f0a54ee69bd616bff3e30341
+SLACKBUILD DOWNLOAD: https://github.com/snort3/snort3/archive/3.1.10.0/snort3-3.1.10.0.tar.gz
+SLACKBUILD MD5SUM: 4240efa8ee163d2445231b9c77e6b89a
 SLACKBUILD SHORT DESCRIPTION:  snort3 (Intrusion Detection and Prevention System)
 
 SLACKBUILD NAME: snort3_extra
 SLACKBUILD LOCATION: ./snort3_extra
 SLACKBUILD FILES: README SLACKWARE.README doinst.sh slack-desc snort3_extra.SlackBuild snort3_extra.info
-SLACKBUILD VERSION: 3.1.9.0
+SLACKBUILD VERSION: 3.1.10.0
 SLACKBUILD REQUIRED: snort3
-SLACKBUILD DOWNLOAD: https://github.com/snort3/snort3_extra/archive/3.1.9.0/snort3_extra-3.1.9.0.tar.gz
-SLACKBUILD MD5SUM: 7c8713d3d6879d90b2b24285bc9d2905
+SLACKBUILD DOWNLOAD: https://github.com/snort3/snort3_extra/archive/3.1.10.0/snort3_extra-3.1.10.0.tar.gz
+SLACKBUILD MD5SUM: 9c86bf011197021565c888e7a6579ea0
 SLACKBUILD SHORT DESCRIPTION:  snort_extra (Snort++ Extras)
 
