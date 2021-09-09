@@ -1,4 +1,8 @@
 brave-bin/brave-bin.SlackBuild
+docker-compose/docker-compose.SlackBuild
+docker-proxy/docker-proxy.SlackBuild
+docker-pycreds/docker-pycreds.SlackBuild
+docker/docker.SlackBuild
 gsa/gsa.SlackBuild
 gvm-libs/gvm-libs.SlackBuild
 gvm-tools/gvm-tools.SlackBuild
@@ -10,6 +14,8 @@ ospd-openvas/ospd-openvas.SlackBuild
 ospd/ospd.SlackBuild
 pidgin-facebook/pidgin-facebook.SlackBuild
 pontos/pontos.SlackBuild
+python-docker/python-docker.SlackBuild
+python-dockerpty/python-dockerpty.SlackBuild
 python-gvm/python-gvm.SlackBuild
 snort-openappid/snort-openappid.SlackBuild
 snort3/snort3.SlackBuild

@@ -11,3 +11,5 @@ application meta data.
 HOME: https://www.snort.org
 
 ======================================================================
+REQUIRES: snort3
+

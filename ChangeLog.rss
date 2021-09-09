@@ -11,9 +11,30 @@
       <description>Corrado Franco (Conraid) Slackware current TESTING package repository.</description>
       <language>en-us</language>
       <id xmlns="http://www.w3.org/2005/Atom">urn:uuid:5f918df8-684b-11dd-bffd-0013d49950e2</id>
-      <pubDate>Sun,  5 Sep 2021 11:01:37 UTC</pubDate>
-      <lastBuildDate>Sun,  5 Sep 2021 11:01:57 UTC</lastBuildDate>
+      <pubDate>Thu,  9 Sep 2021 13:30:26 UTC</pubDate>
+      <lastBuildDate>Thu,  9 Sep 2021 13:30:36 UTC</lastBuildDate>
       <generator>gen_repos_files.sh v 1.98</generator>
+      <item>
+         <title>Thu,  9 Sep 2021 13:30:26 UTC</title>
+         <link>http://slack.conraid.net/repository/slackware64-current-testing/ChangeLog.txt</link>
+         <pubDate>Thu,  9 Sep 2021 13:30:26 UTC</pubDate>
+         <guid isPermaLink="false">20210909153026</guid>
+         <description>
+           <![CDATA[<pre>
+brave-bin-1.29.79-x86_64-1cf.txz:  Upgraded.
+docker-19.03.14-x86_64-1cf.txz:  Added.
+docker-compose-1.28.5-x86_64-1cf.txz:  Added.
+docker-proxy-264bffc-x86_64-1cf.txz:  Added.
+docker-pycreds-0.4.0-x86_64-3cf.txz:  Added.
+libdaq-3.0.5-x86_64-1cf.txz:  Upgraded.
+python-docker-5.0.1-x86_64-1cf.txz:  Added.
+python-dockerpty-0.4.1-x86_64-3cf.txz:  Added.
+snort-openappid-19913-x86_64-1cf.txz:  Upgraded.
+snort3-3.1.12.0-x86_64-1cf.txz:  Upgraded.
+snort3_extra-3.1.12.0-x86_64-1cf.txz:  Upgraded.
+           </pre>]]>
+         </description>
+      </item>
       <item>
          <title>Sun,  5 Sep 2021 11:01:37 UTC</title>
          <link>http://slack.conraid.net/repository/slackware64-current-testing/ChangeLog.txt</link>
@@ -165,10 +186,10 @@ php8-xdebug-3.0.0-x86_64-1cf.txz:  Added.
          </description>
       </item>
       <item>
-         <title>Sun,  5 Sep 2021 00:00:00 UTC</title>
+         <title>Thu,  9 Sep 2021 00:00:00 UTC</title>
          <link>http://slack.conraid.net/repository/slackware64-current-testing/ChangeLog.txt</link>
-         <pubDate>Sun,  5 Sep 2021 00:00:00 UTC</pubDate>
-         <guid isPermaLink="false">20210905020000</guid>
+         <pubDate>Thu,  9 Sep 2021 00:00:00 UTC</pubDate>
+         <guid isPermaLink="false">20210909020000</guid>
          <description>
            <![CDATA[<pre>
            </pre>]]>

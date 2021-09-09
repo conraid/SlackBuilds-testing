@@ -1,11 +1,47 @@
 SLACKBUILD NAME: brave-bin
 SLACKBUILD LOCATION: ./brave-bin
 SLACKBUILD FILES: README brave-bin.SlackBuild brave-bin.info doinst.sh files/brave-bin.desktop files/brave-bin.sh files/brave.png slack-desc
-SLACKBUILD VERSION: 1.27.110
+SLACKBUILD VERSION: 1.29.79
 SLACKBUILD REQUIRED: 
-SLACKBUILD DOWNLOAD: https://github.com/brave/brave-browser/releases/download/v1.27.110/brave-browser-1.27.110-linux-amd64.zip
-SLACKBUILD MD5SUM: 5eddc82fef5731595273dc331e8ecffb
+SLACKBUILD DOWNLOAD: https://github.com/brave/brave-browser/releases/download/v1.29.79/brave-browser-1.29.79-linux-amd64.zip
+SLACKBUILD MD5SUM: 56a6882939aea9e842afc191e0ff13be
 SLACKBUILD SHORT DESCRIPTION:  brave (Next generation Brave browser)
+
+SLACKBUILD NAME: docker-compose
+SLACKBUILD LOCATION: ./docker-compose
+SLACKBUILD FILES: README docker-compose.SlackBuild docker-compose.info slack-desc
+SLACKBUILD VERSION: 1.28.5
+SLACKBUILD REQUIRED: python-docopt docker python-cached-property python-docker python-dockerpty paramiko python-websocket-client pyyaml python-jsonschema python-texttable
+SLACKBUILD DOWNLOAD: https://pypi.python.org/packages/source/d/docker-compose/docker-compose-1.28.5.tar.gz
+SLACKBUILD MD5SUM: a13bbf434827a963493932858aa2d052
+SLACKBUILD SHORT DESCRIPTION:  docker-compose (multi-container orchestration for docker)
+
+SLACKBUILD NAME: docker-proxy
+SLACKBUILD LOCATION: ./docker-proxy
+SLACKBUILD FILES: README docker-proxy.SlackBuild docker-proxy.info slack-desc
+SLACKBUILD VERSION: 264bffc
+SLACKBUILD REQUIRED: go
+SLACKBUILD DOWNLOAD: https://github.com/docker/libnetwork/archive/264bffcb88c1b6b7471c04e3c6b3f301233a544b.tar.gz
+SLACKBUILD MD5SUM: c7cc22089641dec3bf43a1c71bd2b7d9
+SLACKBUILD SHORT DESCRIPTION:  docker-proxy (docker networking)
+
+SLACKBUILD NAME: docker-pycreds
+SLACKBUILD LOCATION: ./docker-pycreds
+SLACKBUILD FILES: README docker-pycreds.SlackBuild docker-pycreds.info slack-desc
+SLACKBUILD VERSION: 0.4.0
+SLACKBUILD REQUIRED: 
+SLACKBUILD DOWNLOAD: https://pypi.python.org/packages/source/d/docker-pycreds/docker-pycreds-0.4.0.tar.gz
+SLACKBUILD MD5SUM: 322f570cea6b4661c6ac335683988e18
+SLACKBUILD SHORT DESCRIPTION:  docker-pycreds (Python bindings for the docker credentials store API)
+
+SLACKBUILD NAME: docker
+SLACKBUILD LOCATION: ./docker
+SLACKBUILD FILES: PKGNOTE README docker.SlackBuild docker.info doinst.sh files/docker.default files/docker.logrotate files/rc.docker slack-desc
+SLACKBUILD VERSION: 19.03.14
+SLACKBUILD REQUIRED: go docker-proxy tini libseccomp
+SLACKBUILD DOWNLOAD: https://github.com/docker/docker-ce/archive/v19.03.14.tar.gz
+SLACKBUILD MD5SUM: f932ff952a0411223a90baaf5b829883
+SLACKBUILD SHORT DESCRIPTION:  docker (manager for applications in Linux containers)
 
 SLACKBUILD NAME: gsa
 SLACKBUILD LOCATION: ./gsa
@@ -46,10 +82,10 @@ SLACKBUILD SHORT DESCRIPTION:  gvmd (Greenbone Vulnerability Manager)
 SLACKBUILD NAME: libdaq
 SLACKBUILD LOCATION: ./libdaq
 SLACKBUILD FILES: README libdaq.SlackBuild libdaq.info slack-desc
-SLACKBUILD VERSION: 3.0.4
+SLACKBUILD VERSION: 3.0.5
 SLACKBUILD REQUIRED: libdnet
-SLACKBUILD DOWNLOAD: https://github.com/snort3/libdaq/archive/v3.0.4/libdaq-3.0.4.tar.gz
-SLACKBUILD MD5SUM: 4b454134d76fa90143a8b04f55f5d33d
+SLACKBUILD DOWNLOAD: https://github.com/snort3/libdaq/archive/v3.0.5/libdaq-3.0.5.tar.gz
+SLACKBUILD MD5SUM: 0bffef05b785fd34c7d1c7bbee7b2e5c
 SLACKBUILD SHORT DESCRIPTION:  libdaq (Data Acquisition libary)
 
 SLACKBUILD NAME: mping
@@ -106,6 +142,24 @@ SLACKBUILD DOWNLOAD: https://pypi.python.org/packages/source/p/pontos/pontos-21.
 SLACKBUILD MD5SUM: 2f1c19a626250eec7e4992d9e1fc968d
 SLACKBUILD SHORT DESCRIPTION:  pontos (Greenbone Python Utilities and Tools )
 
+SLACKBUILD NAME: python-docker
+SLACKBUILD LOCATION: ./python-docker
+SLACKBUILD FILES: README python-docker.SlackBuild python-docker.info slack-desc
+SLACKBUILD VERSION: 5.0.1
+SLACKBUILD REQUIRED: paramiko python-websocket-client docker-pycreds
+SLACKBUILD DOWNLOAD: https://pypi.python.org/packages/source/d/docker/docker-5.0.1.tar.gz
+SLACKBUILD MD5SUM: 99f2d9f467442290be43903a33602986
+SLACKBUILD SHORT DESCRIPTION:  python-docker (A Python library for the Docker Engine API)
+
+SLACKBUILD NAME: python-dockerpty
+SLACKBUILD LOCATION: ./python-dockerpty
+SLACKBUILD FILES: README python-dockerpty.SlackBuild python-dockerpty.info slack-desc
+SLACKBUILD VERSION: 0.4.1
+SLACKBUILD REQUIRED: 
+SLACKBUILD DOWNLOAD: https://pypi.python.org/packages/source/d/dockerpty/dockerpty-0.4.1.tar.gz
+SLACKBUILD MD5SUM: 028bacb34536f3ee6a2ccd668c27e8e4
+SLACKBUILD SHORT DESCRIPTION:  python-dockerpty
+
 SLACKBUILD NAME: python-gvm
 SLACKBUILD LOCATION: ./python-gvm
 SLACKBUILD FILES: README SLACKWARE.README python-gvm.SlackBuild python-gvm.info slack-desc
@@ -118,27 +172,27 @@ SLACKBUILD SHORT DESCRIPTION:  python-gvm (GVM Python Library)
 SLACKBUILD NAME: snort-openappid
 SLACKBUILD LOCATION: ./snort-openappid
 SLACKBUILD FILES: README slack-desc snort-openappid.SlackBuild snort-openappid.info
-SLACKBUILD VERSION: 17843
-SLACKBUILD REQUIRED: 
-SLACKBUILD DOWNLOAD: https://www.snort.org/downloads/openappid/17843
-SLACKBUILD MD5SUM: d494c0950a1557e3453756eff2b176f3
+SLACKBUILD VERSION: 19913
+SLACKBUILD REQUIRED: snort3
+SLACKBUILD DOWNLOAD: https://www.snort.org/downloads/openappid/19913
+SLACKBUILD MD5SUM: 61ed139e5c7cfc657104c0490772d2a6
 SLACKBUILD SHORT DESCRIPTION:  snort-openappid (Open Detector Package)
 
 SLACKBUILD NAME: snort3
 SLACKBUILD LOCATION: ./snort3
 SLACKBUILD FILES: README SLACKWARE.README doinst.sh files/local.lua files/rc.snort rc.snort3 slack-desc snort3.SlackBuild snort3.info
-SLACKBUILD VERSION: 3.1.10.0
+SLACKBUILD VERSION: 3.1.12.0
 SLACKBUILD REQUIRED: flatbuffers libdaq libdnet luajit hwloc hyperscan libsafec snort-openappid
-SLACKBUILD DOWNLOAD: https://github.com/snort3/snort3/archive/3.1.10.0/snort3-3.1.10.0.tar.gz
-SLACKBUILD MD5SUM: 4240efa8ee163d2445231b9c77e6b89a
+SLACKBUILD DOWNLOAD: https://github.com/snort3/snort3/archive/3.1.12.0/snort3-3.1.12.0.tar.gz
+SLACKBUILD MD5SUM: eea40c13eadf9a12b3ac5932de80af28
 SLACKBUILD SHORT DESCRIPTION:  snort3 (Intrusion Detection and Prevention System)
 
 SLACKBUILD NAME: snort3_extra
 SLACKBUILD LOCATION: ./snort3_extra
 SLACKBUILD FILES: README SLACKWARE.README doinst.sh slack-desc snort3_extra.SlackBuild snort3_extra.info
-SLACKBUILD VERSION: 3.1.10.0
+SLACKBUILD VERSION: 3.1.12.0
 SLACKBUILD REQUIRED: snort3
-SLACKBUILD DOWNLOAD: https://github.com/snort3/snort3_extra/archive/3.1.10.0/snort3_extra-3.1.10.0.tar.gz
-SLACKBUILD MD5SUM: 9c86bf011197021565c888e7a6579ea0
+SLACKBUILD DOWNLOAD: https://github.com/snort3/snort3_extra/archive/3.1.12.0/snort3_extra-3.1.12.0.tar.gz
+SLACKBUILD MD5SUM: 919b294bba852ab212146bde4070c63b
 SLACKBUILD SHORT DESCRIPTION:  snort_extra (Snort++ Extras)
 
