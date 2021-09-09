@@ -1,0 +1,14 @@
+
+Slackware Current Repository by Conraid
+
+======================================================================
+
+mping (A simple multicast ping program)
+
+mping intends to be an easy to use and script friendly program.
+Similar to the standard ping program, but unlike it, the response to
+multicast ping is sent by another mping.
+
+HOME: https://github.com/troglobit/mping
+
+======================================================================
