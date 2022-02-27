@@ -11,9 +11,35 @@
       <description>Corrado Franco (Conraid) Slackware current TESTING package repository.</description>
       <language>en-us</language>
       <id xmlns="http://www.w3.org/2005/Atom">urn:uuid:5f918df8-684b-11dd-bffd-0013d49950e2</id>
-      <pubDate>Thu,  9 Sep 2021 13:30:26 UTC</pubDate>
-      <lastBuildDate>Thu,  9 Sep 2021 13:30:36 UTC</lastBuildDate>
+      <pubDate>Sun, 27 Feb 2022 10:29:06 UTC</pubDate>
+      <lastBuildDate>Sun, 27 Feb 2022 10:29:38 UTC</lastBuildDate>
       <generator>gen_repos_files.sh v 1.98</generator>
+      <item>
+         <title>Sun, 27 Feb 2022 10:29:06 UTC</title>
+         <link>http://slack.conraid.net/repository/slackware64-current-testing/ChangeLog.txt</link>
+         <pubDate>Sun, 27 Feb 2022 10:29:06 UTC</pubDate>
+         <guid isPermaLink="false">20220227112906</guid>
+         <description>
+           <![CDATA[<pre>
+libdaq-3.0.6-x86_64-1cf.txz:  Upgraded.
+mping-1.6-x86_64-1cf.txz:  Upgraded.
+snort-openappid-23020-x86_64-1cf.txz:  Upgraded.
+snort3-3.1.24.0-x86_64-1cf.txz:  Upgraded.
+snort3_extra-3.1.24.0-x86_64-1cf.txz:  Upgraded.
+           </pre>]]>
+         </description>
+      </item>
+      <item>
+         <title>Tue, 22 Feb 2022 10:20:53 UTC</title>
+         <link>http://slack.conraid.net/repository/slackware64-current-testing/ChangeLog.txt</link>
+         <pubDate>Tue, 22 Feb 2022 10:20:53 UTC</pubDate>
+         <guid isPermaLink="false">20220222112053</guid>
+         <description>
+           <![CDATA[<pre>
+brave-bin-1.29.79-x86_64-1cf.txz:  Removed.
+           </pre>]]>
+         </description>
+      </item>
       <item>
          <title>Thu,  9 Sep 2021 13:30:26 UTC</title>
          <link>http://slack.conraid.net/repository/slackware64-current-testing/ChangeLog.txt</link>
@@ -186,10 +212,10 @@ php8-xdebug-3.0.0-x86_64-1cf.txz:  Added.
          </description>
       </item>
       <item>
-         <title>Thu,  9 Sep 2021 00:00:00 UTC</title>
+         <title>Sun, 27 Feb 2022 00:00:00 UTC</title>
          <link>http://slack.conraid.net/repository/slackware64-current-testing/ChangeLog.txt</link>
-         <pubDate>Thu,  9 Sep 2021 00:00:00 UTC</pubDate>
-         <guid isPermaLink="false">20210909020000</guid>
+         <pubDate>Sun, 27 Feb 2022 00:00:00 UTC</pubDate>
+         <guid isPermaLink="false">20220227010000</guid>
          <description>
            <![CDATA[<pre>
            </pre>]]>

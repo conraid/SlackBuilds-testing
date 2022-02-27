@@ -1,4 +1,3 @@
-brave-bin/brave-bin.SlackBuild
 docker-compose/docker-compose.SlackBuild
 docker-proxy/docker-proxy.SlackBuild
 docker-pycreds/docker-pycreds.SlackBuild

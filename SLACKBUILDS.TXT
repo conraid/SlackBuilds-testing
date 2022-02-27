@@ -1,12 +1,3 @@
-SLACKBUILD NAME: brave-bin
-SLACKBUILD LOCATION: ./brave-bin
-SLACKBUILD FILES: README brave-bin.SlackBuild brave-bin.info doinst.sh files/brave-bin.desktop files/brave-bin.sh files/brave.png slack-desc
-SLACKBUILD VERSION: 1.29.79
-SLACKBUILD REQUIRED: 
-SLACKBUILD DOWNLOAD: https://github.com/brave/brave-browser/releases/download/v1.29.79/brave-browser-1.29.79-linux-amd64.zip
-SLACKBUILD MD5SUM: 56a6882939aea9e842afc191e0ff13be
-SLACKBUILD SHORT DESCRIPTION:  brave (Next generation Brave browser)
-
 SLACKBUILD NAME: docker-compose
 SLACKBUILD LOCATION: ./docker-compose
 SLACKBUILD FILES: README docker-compose.SlackBuild docker-compose.info slack-desc
@@ -82,19 +73,19 @@ SLACKBUILD SHORT DESCRIPTION:  gvmd (Greenbone Vulnerability Manager)
 SLACKBUILD NAME: libdaq
 SLACKBUILD LOCATION: ./libdaq
 SLACKBUILD FILES: README libdaq.SlackBuild libdaq.info slack-desc
-SLACKBUILD VERSION: 3.0.5
+SLACKBUILD VERSION: 3.0.6
 SLACKBUILD REQUIRED: libdnet
-SLACKBUILD DOWNLOAD: https://github.com/snort3/libdaq/archive/v3.0.5/libdaq-3.0.5.tar.gz
-SLACKBUILD MD5SUM: 0bffef05b785fd34c7d1c7bbee7b2e5c
+SLACKBUILD DOWNLOAD: https://github.com/snort3/libdaq/archive/v3.0.6/libdaq-3.0.6.tar.gz
+SLACKBUILD MD5SUM: 95834f253dcad56d31851d3149c8e9d9
 SLACKBUILD SHORT DESCRIPTION:  libdaq (Data Acquisition libary)
 
 SLACKBUILD NAME: mping
 SLACKBUILD LOCATION: ./mping
 SLACKBUILD FILES: README mping.SlackBuild mping.info slack-desc
-SLACKBUILD VERSION: 1.5
+SLACKBUILD VERSION: 1.6
 SLACKBUILD REQUIRED: 
-SLACKBUILD DOWNLOAD: https://github.com/troglobit/mping//archive/v1.5/mping-1.5.tar.gz
-SLACKBUILD MD5SUM: bb49f70831dc0082c1297c79fb2564c9
+SLACKBUILD DOWNLOAD: https://github.com/troglobit/mping//archive/v1.6/mping-1.6.tar.gz
+SLACKBUILD MD5SUM: bafde09c3cae5b96e9852e1bf5ebd455
 SLACKBUILD SHORT DESCRIPTION:  mping (A simple multicast ping program)
 
 SLACKBUILD NAME: openvas-scanner
@@ -172,27 +163,27 @@ SLACKBUILD SHORT DESCRIPTION:  python-gvm (GVM Python Library)
 SLACKBUILD NAME: snort-openappid
 SLACKBUILD LOCATION: ./snort-openappid
 SLACKBUILD FILES: README slack-desc snort-openappid.SlackBuild snort-openappid.info
-SLACKBUILD VERSION: 19913
+SLACKBUILD VERSION: 23020
 SLACKBUILD REQUIRED: snort3
-SLACKBUILD DOWNLOAD: https://www.snort.org/downloads/openappid/19913
-SLACKBUILD MD5SUM: 61ed139e5c7cfc657104c0490772d2a6
+SLACKBUILD DOWNLOAD: https://www.snort.org/downloads/openappid/23020
+SLACKBUILD MD5SUM: 5f660e60ad199bd5e2dbcaec8a7b2165
 SLACKBUILD SHORT DESCRIPTION:  snort-openappid (Open Detector Package)
 
 SLACKBUILD NAME: snort3
 SLACKBUILD LOCATION: ./snort3
 SLACKBUILD FILES: README SLACKWARE.README doinst.sh files/local.lua files/rc.snort rc.snort3 slack-desc snort3.SlackBuild snort3.info
-SLACKBUILD VERSION: 3.1.12.0
+SLACKBUILD VERSION: 3.1.24.0
 SLACKBUILD REQUIRED: flatbuffers libdaq libdnet luajit hwloc hyperscan libsafec snort-openappid
-SLACKBUILD DOWNLOAD: https://github.com/snort3/snort3/archive/3.1.12.0/snort3-3.1.12.0.tar.gz
-SLACKBUILD MD5SUM: eea40c13eadf9a12b3ac5932de80af28
+SLACKBUILD DOWNLOAD: https://github.com/snort3/snort3/archive/3.1.24.0/snort3-3.1.24.0.tar.gz
+SLACKBUILD MD5SUM: 5845585b4b2bea26039cea9842ee8362
 SLACKBUILD SHORT DESCRIPTION:  snort3 (Intrusion Detection and Prevention System)
 
 SLACKBUILD NAME: snort3_extra
 SLACKBUILD LOCATION: ./snort3_extra
 SLACKBUILD FILES: README SLACKWARE.README doinst.sh slack-desc snort3_extra.SlackBuild snort3_extra.info
-SLACKBUILD VERSION: 3.1.12.0
+SLACKBUILD VERSION: 3.1.24.0
 SLACKBUILD REQUIRED: snort3
-SLACKBUILD DOWNLOAD: https://github.com/snort3/snort3_extra/archive/3.1.12.0/snort3_extra-3.1.12.0.tar.gz
-SLACKBUILD MD5SUM: 919b294bba852ab212146bde4070c63b
+SLACKBUILD DOWNLOAD: https://github.com/snort3/snort3_extra/archive/3.1.24.0/snort3_extra-3.1.24.0.tar.gz
+SLACKBUILD MD5SUM: cbe770166aa351c78b261fe175d7096e
 SLACKBUILD SHORT DESCRIPTION:  snort_extra (Snort++ Extras)
 
