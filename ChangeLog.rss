@@ -11,9 +11,32 @@
       <description>Corrado Franco (Conraid) Slackware current TESTING package repository.</description>
       <language>en-us</language>
       <id xmlns="http://www.w3.org/2005/Atom">urn:uuid:5f918df8-684b-11dd-bffd-0013d49950e2</id>
-      <pubDate>Sun, 27 Feb 2022 10:29:06 UTC</pubDate>
-      <lastBuildDate>Sun, 27 Feb 2022 10:29:38 UTC</lastBuildDate>
+      <pubDate>Thu,  5 May 2022 13:00:12 UTC</pubDate>
+      <lastBuildDate>Thu,  5 May 2022 13:01:00 UTC</lastBuildDate>
       <generator>gen_repos_files.sh v 1.98</generator>
+      <item>
+         <title>Thu,  5 May 2022 13:00:12 UTC</title>
+         <link>http://slack.conraid.net/repository/slackware64-current-testing/ChangeLog.txt</link>
+         <pubDate>Thu,  5 May 2022 13:00:12 UTC</pubDate>
+         <guid isPermaLink="false">20220505150012</guid>
+         <description>
+           <![CDATA[<pre>
+gsa-21.4.4-x86_64-1cf.txz:  Upgraded.
+gsad-21.4.4-x86_64-1cf.txz:  Added.
+gvm-libs-21.4.4-x86_64-1cf.txz:  Upgraded.
+gvm-tools-21.10.0-x86_64-1cf.txz:  Upgraded.
+gvmd-21.4.5-x86_64-1cf.txz:  Upgraded.
+libdaq-3.0.7-x86_64-1cf.txz:  Upgraded.
+openvas-scanner-21.4.4-x86_64-1cf.txz:  Upgraded.
+ospd-21.4.4-x86_64-1cf.txz:  Upgraded.
+ospd-openvas-21.4.4-x86_64-1cf.txz:  Upgraded.
+pontos-22.4.0-x86_64-1cf.txz:  Upgraded.
+python-gvm-21.11.0-x86_64-1cf.txz:  Upgraded.
+snort3-3.1.29.0-x86_64-1cf.txz:  Upgraded.
+snort3_extra-3.1.29.0-x86_64-1cf.txz:  Upgraded.
+           </pre>]]>
+         </description>
+      </item>
       <item>
          <title>Sun, 27 Feb 2022 10:29:06 UTC</title>
          <link>http://slack.conraid.net/repository/slackware64-current-testing/ChangeLog.txt</link>
@@ -212,10 +235,10 @@ php8-xdebug-3.0.0-x86_64-1cf.txz:  Added.
          </description>
       </item>
       <item>
-         <title>Sun, 27 Feb 2022 00:00:00 UTC</title>
+         <title>Thu,  5 May 2022 00:00:00 UTC</title>
          <link>http://slack.conraid.net/repository/slackware64-current-testing/ChangeLog.txt</link>
-         <pubDate>Sun, 27 Feb 2022 00:00:00 UTC</pubDate>
-         <guid isPermaLink="false">20220227010000</guid>
+         <pubDate>Thu,  5 May 2022 00:00:00 UTC</pubDate>
+         <guid isPermaLink="false">20220505020000</guid>
          <description>
            <![CDATA[<pre>
            </pre>]]>

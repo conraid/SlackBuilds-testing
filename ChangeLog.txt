@@ -1,3 +1,18 @@
+Thu May 5 13:00:12 UTC 2022
+gsa-21.4.4-x86_64-1cf.txz:  Upgraded.
+gsad-21.4.4-x86_64-1cf.txz:  Added.
+gvm-libs-21.4.4-x86_64-1cf.txz:  Upgraded.
+gvm-tools-21.10.0-x86_64-1cf.txz:  Upgraded.
+gvmd-21.4.5-x86_64-1cf.txz:  Upgraded.
+libdaq-3.0.7-x86_64-1cf.txz:  Upgraded.
+openvas-scanner-21.4.4-x86_64-1cf.txz:  Upgraded.
+ospd-21.4.4-x86_64-1cf.txz:  Upgraded.
+ospd-openvas-21.4.4-x86_64-1cf.txz:  Upgraded.
+pontos-22.4.0-x86_64-1cf.txz:  Upgraded.
+python-gvm-21.11.0-x86_64-1cf.txz:  Upgraded.
+snort3-3.1.29.0-x86_64-1cf.txz:  Upgraded.
+snort3_extra-3.1.29.0-x86_64-1cf.txz:  Upgraded.
++--------------------------+
 Sun Feb 27 10:29:06 UTC 2022
 libdaq-3.0.6-x86_64-1cf.txz:  Upgraded.
 mping-1.6-x86_64-1cf.txz:  Upgraded.

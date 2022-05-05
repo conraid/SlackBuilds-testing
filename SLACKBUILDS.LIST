@@ -3,6 +3,7 @@ docker-proxy/docker-proxy.SlackBuild
 docker-pycreds/docker-pycreds.SlackBuild
 docker/docker.SlackBuild
 gsa/gsa.SlackBuild
+gsad/gsad.SlackBuild
 gvm-libs/gvm-libs.SlackBuild
 gvm-tools/gvm-tools.SlackBuild
 gvmd/gvmd.SlackBuild

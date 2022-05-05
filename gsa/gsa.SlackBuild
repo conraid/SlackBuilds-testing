@@ -1,8 +1,8 @@
 #!/bin/bash
 #
-# Slackware build script for greenbone-security-assistant
+# Slackware build script for gsa
 #
-# Copyright 2014-2021 Corrado Franco (https://corradofranco.it)
+# Copyright 2021-2022 Corrado Franco (https://corradofranco.it)
 # All rights reserved.
 #
 # This program is free software: you can redistribute it and/or modify
@@ -29,8 +29,9 @@ set -eu
 
 cd $(dirname $0) ; CWD=$(pwd)
 
-PKGNAM=gsa
-SRCVERSION=21.4.2
+PRGNAM=gsa
+PKGNAM=$(echo $PRGNAM | tr A-Z a-z)
+SRCVERSION=21.4.4
 VERSION=$(echo $SRCVERSION | tr - _)
 BUILD=${BUILD:-1}
 TAG=${TAG:-cf}
@@ -38,13 +39,13 @@ TMP=${TMP:-/tmp/pkg}
 PKG=$TMP/package-$PKGNAM
 OUTPUT=${OUTPUT:-/tmp}
 
-DOCFILES="*.md LICENSE"
+DOCFILES="LICENSE *.md"
 
 if [ -z ${ARCH:=""} ]; then
   case "$( uname -m )" in
-    i?86) ARCH=i686 ;;
-    arm*) ARCH=arm ;;
-    *) ARCH=$( uname -m ) ;;
+  i?86) ARCH=i686 ;;
+  arm*) ARCH=arm ;;
+  *) ARCH=$( uname -m ) ;;
   esac
 fi
 
@@ -52,92 +53,50 @@ fi
 # the name of the created package would be, and then exit. This information
 # could be useful to other scripts.
 if [ ! -z "${PRINT_PACKAGE_NAME:-""}" ]; then
-  echo "$PKGNAM-$VERSION-$ARCH-${BUILD}${TAG}.txz"
+  echo "$PKGNAM-$VERSION-$ARCH-$BUILD.txz"
   exit 0
 fi
 
-if [ "$ARCH" = "i586" ]; then
-  SLKCFLAGS="-O2 -march=i586 -mtune=i686"
-  LIBDIRSUFFIX=""
-elif [ "$ARCH" = "i686" ]; then
-  SLKCFLAGS="-O2 -march=i686 -mtune=i686"
-  LIBDIRSUFFIX=""
-elif [ "$ARCH" = "x86_64" ]; then
-  SLKCFLAGS="-O2 -fPIC -pipe -fomit-frame-pointer"
-  LIBDIRSUFFIX="64"
-else
-  SLKCFLAGS="-O2"
-  LIBDIRSUFFIX=""
-fi
+[ "$ARCH" = "x86_64" ] && LIBDIRSUFFIX="64" || LIBDIRSUFFIX=""
 
 rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
+
 cd $TMP
-rm -rf $PKGNAM-$SRCVERSION
-tar xvf $CWD/$PKGNAM-$SRCVERSION.tar.gz
-cd $PKGNAM-$SRCVERSION
+rm -rf $PRGNAM-$VERSION
+tar xvf $CWD/$PRGNAM-$VERSION.tar.gz || tar xvf $CWD/v$VERSION.tar.gz
+cd $PRGNAM-$VERSION
 
 chown -R root:root .
-chmod -R u+w,go+r-w,a+X-s .
+find -L . \
+  \( -perm 777 -o -perm 775 -o -perm 750 -o -perm 711 -o -perm 555 -o -perm 511 \) \
+  -exec chmod 755 {} \; -o \
+  \( -perm 666 -o -perm 664 -o -perm 600 -o -perm 444 -o -perm 440 -o -perm 400 \) \
+  -exec chmod 644 {} \;
 
-# Apply patches
-if [ -e $CWD/patches/ ]; then
-  for PATCH in $CWD/patches/*.patch; do
-    patch -p1 -i $PATCH
-  done
-fi
+mkdir -p $PKG/usr/lib$LIBDIRSUFFIX
 
-# Sane man path
-sed 's|\${DATADIR}/man/man|${CMAKE_INSTALL_PREFIX}/man/man|g' -i */doc/CMakeLists.txt
+DESTDIR=$PKG npm install --user root -g --no-bin-links $(npm pack | tail -1)
 
-# Fix git error
-sed 's/GIT_REV_AVAILABLE/GIT_REVISION/' -i gsad/src/gsad.c
+# Remove empty dir
+rmdir $PKG/usr/etc || true
 
-# Fix react error
-echo "SKIP_PREFLIGHT_CHECK=true" >> gsa/.env
+# Remove unneeded files.
+find $PKG/usr \( -name '.git*' -o -name '.travis.yml' \) -exec rm -f {} \;
 
-mkdir -p build
-cd build
-cmake \
-  -DCMAKE_C_FLAGS:STRING="$SLKCFLAGS" \
-  -DCMAKE_BUILD_TYPE=none \
-  -DCMAKE_INSTALL_PREFIX=/usr \
-  -DSYSCONFDIR=/etc \
-  -DLOCALSTATEDIR=/var \
-  ..
-
-make
-make DESTDIR=$PKG install
-cd ..
-
-# Don't ship .la files:
-rm -f $PKG/{,usr/}lib${LIBDIRSUFFIX}/*.la
-
-find $PKG | xargs file | grep -e "executable" -e "shared object" | grep ELF | cut -f 1 -d : | xargs -r strip --strip-unneeded 2> /dev/null || true
-find $PKG | xargs file | grep "current ar archive" | cut -f 1 -d : | xargs -r strip -g 2> /dev/null || true
-
-if [ -d $PKG/usr/man ]; then
-  find $PKG/usr/man -type f -exec chmod 644 {} \; -exec gzip -9 {} \;
-  for i in $( find $PKG/usr/man -type l ) ; do ln -s $( readlink $i ).gz $i.gz ; rm $i ; done
-fi
-
-# Removed systemd files
-rm -rf $PKG/lib
+# Remove occurrences of $PKG
+find $PKG -name "package.json" \
+  -exec sed -e "s|${TMP}/${PRGNAM}-build||" \
+            -e "s|${TMP}/${PRGNAM}-${VERSION}|/usr/lib${LIBDIRSUFFIX}/node_modules/${PRGNAM}|" \
+            -e "s|$CWD||g" \
+            -i '{}' \;
 
 mkdir -p $PKG/usr/doc/$PKGNAM-$VERSION
 cp -a $DOCFILES $PKG/usr/doc/$PKGNAM-$VERSION || true
-cat $CWD/SLACKWARE.README > $PKG/usr/doc/$PKGNAM-$VERSION/SLACKWARE.README
 cat $CWD/$PKGNAM.SlackBuild > $PKG/usr/doc/$PKGNAM-$VERSION/$PKGNAM.SlackBuild
-
-# Rename config files
-mv $PKG/etc/gvm/gsad_log.conf $PKG/etc/gvm/gsad_log.conf.new
-
-# Install rc script (thanks to SBo)
-install -Dm644 $CWD/files/rc.gsad $PKG/etc/rc.d/rc.gsad.new
 
 mkdir -p $PKG/install
 cat $CWD/slack-desc > $PKG/install/slack-desc
-cat $CWD/doinst.sh > $PKG/install/doinst.sh
 
 cd $PKG
 /sbin/makepkg -l y -c n $OUTPUT/$PKGNAM-$VERSION-$ARCH-$BUILD$TAG.${PKGTYPE:-txz}
