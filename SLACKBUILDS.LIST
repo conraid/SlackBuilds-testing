@@ -1,3 +1,4 @@
+displaycal/displaycal.SlackBuild
 docker-compose/docker-compose.SlackBuild
 docker-proxy/docker-proxy.SlackBuild
 docker-pycreds/docker-pycreds.SlackBuild
@@ -12,6 +13,7 @@ mping/mping.SlackBuild
 openvas-scanner/openvas-scanner.SlackBuild
 ospd-openvas/ospd-openvas.SlackBuild
 ospd/ospd.SlackBuild
+paho-mqtt-c/paho-mqtt-c.SlackBuild
 pidgin-facebook/pidgin-facebook.SlackBuild
 pontos/pontos.SlackBuild
 python-docker/python-docker.SlackBuild

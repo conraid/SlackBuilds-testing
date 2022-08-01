@@ -1,3 +1,21 @@
+Mon Aug 1 16:12:15 UTC 2022
+displaycal-3.9.6-x86_64-1cf.txz:  Added.
+gsa-22.4.0-x86_64-1cf.txz:  Upgraded.
+gsad-22.4.0-x86_64-1cf.txz:  Upgraded.
+gvm-libs-22.4.0-x86_64-1cf.txz:  Upgraded.
+gvm-tools-22.6.1-x86_64-1cf.txz:  Upgraded.
+gvmd-22.4.0-x86_64-1cf.txz:  Upgraded.
+libdaq-3.0.9-x86_64-1cf.txz:  Upgraded.
+mping-2.0-x86_64-1cf.txz:  Upgraded.
+openvas-scanner-22.4.0-x86_64-1cf.txz:  Upgraded.
+ospd-openvas-22.4.0-x86_64-1cf.txz:  Upgraded.
+paho-mqtt-c-1.3.10-x86_64-1cf.txz:  Added.
+pontos-22.8.0-x86_64-1cf.txz:  Upgraded.
+python-gvm-22.7.0-x86_64-1cf.txz:  Upgraded.
+snort-openappid-26425-x86_64-1cf.txz:  Upgraded.
+snort3-3.1.38.0-x86_64-1cf.txz:  Upgraded.
+snort3_extra-3.1.38.0-x86_64-1cf.txz:  Upgraded.
++--------------------------+
 Thu May 5 13:00:12 UTC 2022
 gsa-21.4.4-x86_64-1cf.txz:  Upgraded.
 gsad-21.4.4-x86_64-1cf.txz:  Added.

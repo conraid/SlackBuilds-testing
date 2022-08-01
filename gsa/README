@@ -113,5 +113,5 @@ http://slackbuilds.org/slackbuilds/14.1/network/greenbone-security-assistant/REA
 by Kent Fritz (fritz.kent@gmail.com)
 
 ======================
-REQUIRES: libmicrohttpd gvm-libs hiredis redis node babel-loader python-polib xmltoman
+REQUIRES: libmicrohttpd gvm-libs hiredis redis babel-loader python-polib xmltoman
 

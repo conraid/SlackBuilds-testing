@@ -29,5 +29,5 @@ openvas, ospd and python-gvm) and related dependencies
 Then you can follow the instructions in the gsa package.
 
 ======================
-REQUIRES: gvm-libs hiredis redis
+REQUIRES: gvm-libs hiredis redis libbsd
 
