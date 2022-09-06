@@ -1,8 +1,8 @@
 #!/bin/bash
 #
-# Slackware build script for snort
+# Slackware build script for greenbone-security-assistant
 #
-# Copyright 2011-2022 Corrado Franco (https://corradofranco.it)
+# Copyright 2014-2022 Corrado Franco (https://corradofranco.it)
 # All rights reserved.
 #
 # This program is free software: you can redistribute it and/or modify
@@ -24,26 +24,27 @@
 # <http://www.gnu.org/licenses/>.
 #
 # Latest version of this SlackBuild at https://github.com/conraid/SlackBuilds
-#
+
 set -eu
 
 cd $(dirname $0) ; CWD=$(pwd)
 
-PKGNAM=snort3
-VERSION=3.1.40.0
+PKGNAM=gsad
+SRCVERSION=22.4.0
+VERSION=$(echo $SRCVERSION | tr - _)
 BUILD=${BUILD:-1}
 TAG=${TAG:-cf}
 TMP=${TMP:-/tmp/pkg}
 PKG=$TMP/package-$PKGNAM
 OUTPUT=${OUTPUT:-/tmp}
 
-DOCFILES="COPYING ChangeLog LICENSE README"
+DOCFILES="*.md LICENSE"
 
 if [ -z ${ARCH:=""} ]; then
   case "$( uname -m )" in
-  i?86) ARCH=i686 ;;
-  arm*) ARCH=arm ;;
-  *) ARCH=$( uname -m ) ;;
+    i?86) ARCH=i686 ;;
+    arm*) ARCH=arm ;;
+    *) ARCH=$( uname -m ) ;;
   esac
 fi
 
@@ -72,9 +73,9 @@ fi
 rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
-rm -rf $PKGNAM-$VERSION
-tar xvf $CWD/$PKGNAM-$VERSION.tar.gz
-cd $PKGNAM-$VERSION
+rm -rf $PKGNAM-$SRCVERSION
+tar xvf $CWD/$PKGNAM-$SRCVERSION.tar.gz
+cd $PKGNAM-$SRCVERSION
 
 chown -R root:root .
 find -L . \
@@ -83,25 +84,27 @@ find -L . \
   \( -perm 666 -o -perm 664 -o -perm 600 -o -perm 444 -o -perm 440 -o -perm 400 \) \
   -exec chmod 644 {} \;
 
-# Sane --libdir setting on Slackware64. Thanks to SBo
-for MF in $(find src/ -name Makefile.in) ; do
-  sed -i 's#\${exec_prefix}/lib/snort_dynamic#@libdir@/snort_dynamic#g' $MF
-done
+# Apply patches
+if [ -e $CWD/patches/ ]; then
+  for PATCH in $CWD/patches/*.patch; do
+    patch -p1 -i $PATCH
+  done
+fi
+
+# Sane man path
+sed 's|\${DATADIR}/man/man|${CMAKE_INSTALL_PREFIX}/man/man|g' -i doc/CMakeLists.txt
+
+# Fix git error
+sed 's/GIT_REV_AVAILABLE/GIT_REVISION/' -i src/gsad.c
 
 mkdir -p build
 cd build
-cmake -Wno-dev \
-  -DCMAKE_C_FLAGS:STRING="$SLKCFLAGS -DNDEBUG" \
-  -DCMAKE_CXX_FLAGS:STRING="$SLKCFLAGS -DNDEBUG" \
-  -DCMAKE_C_FLAGS_RELEASE:STRING="$SLKCFLAGS -DNDEBUG" \
-  -DCMAKE_CXX_FLAGS_RELEASE:STRING="$SLKCFLAGS -DNDEBUG" \
-  -DCMAKE_BUILD_TYPE=Release \
+cmake \
+  -DCMAKE_C_FLAGS:STRING="$SLKCFLAGS" \
+  -DCMAKE_BUILD_TYPE=none \
   -DCMAKE_INSTALL_PREFIX=/usr \
-  -DENABLE_ADDRESS_SANITIZER=ON \
-  -DENABLE_STATIC_DAQ=OFF \
-  -DCMAKE_INSTALL_SYSCONFDIR=/etc \
-  -DCMAKE_INSTALL_DOCDIR=/usr/doc/$PKGNAM-$VERSION \
-  -DDAQ_LIBRARIES_DIR_HINT=/usr/lib${LIBDIRSUFFIX}/daq \
+  -DSYSCONFDIR=/etc \
+  -DLOCALSTATEDIR=/var \
   ..
 
 make
@@ -115,31 +118,23 @@ find $PKG | xargs file | grep -e "executable" -e "shared object" | grep ELF | cu
 find $PKG | xargs file | grep "current ar archive" | cut -f 1 -d : | xargs -r strip -g 2> /dev/null || true
 
 if [ -d $PKG/usr/man ]; then
-  find $PKG/usr/man -type f -exec gzip -9 {} \;
+  find $PKG/usr/man -type f -exec chmod 644 {} \; -exec gzip -9 {} \;
   for i in $( find $PKG/usr/man -type l ) ; do ln -s $( readlink $i ).gz $i.gz ; rm $i ; done
 fi
 
+# Removed systemd files
+rm -rf $PKG/lib
+
 mkdir -p $PKG/usr/doc/$PKGNAM-$VERSION
 cp -a $DOCFILES $PKG/usr/doc/$PKGNAM-$VERSION || true
-install -Dm644 $CWD/SLACKWARE.README $PKG/usr/doc/$PKGNAM-$VERSION/README.SLACKWARE # Thanks to SBo
-
-### Set directory for snort. Thanks to SBo and archlinux
-mkdir -p $PKG/etc/{rc.d,snort/rules,snort/preproc_rules}
-mkdir -p $PKG/var/log/snort
-mkdir -p $PKG/usr/lib${LIBDIRSUFFIX}/snort_dynamicrules
-
-install -D -m644 $CWD/files/local.lua $PKG/etc/snort
-
-install -D -m644 /dev/null $PKG/etc/snort/rules/snort.rules
-echo "HOME_NET = [[ 10.0.0.0/8 172.16.0.0/12 192.168.0.0/16 ]]" > $PKG/etc/snort/homenet.lua
-echo -e '#pulledpork will put rules here in snort.rules\n#alert icmp any any -> any any ( msg:"ICMP Traffic Detected"; sid:10000001; metadata:policy security-ips alert; )' > $PKG/etc/snort/rules/local.rules
-chmod 0644 $PKG/etc/snort/{homenet.lua,rules/{local,snort}.rules}
-
-# Include the rc.snort file.
-sed -e "s/%LIBDIRSUFFIX%/${LIBDIRSUFFIX}/" $CWD/files/rc.snort > $PKG/etc/rc.d/rc.snort.new
-
-mkdir -p $PKG/usr/doc/$PKGNAM-$VERSION
+cat $CWD/SLACKWARE.README > $PKG/usr/doc/$PKGNAM-$VERSION/SLACKWARE.README
 cat $CWD/$PKGNAM.SlackBuild > $PKG/usr/doc/$PKGNAM-$VERSION/$PKGNAM.SlackBuild
+
+# Rename config files
+mv $PKG/etc/gvm/gsad_log.conf $PKG/etc/gvm/gsad_log.conf.new
+
+# Install rc script (thanks to SBo)
+install -Dm644 $CWD/files/rc.gsad $PKG/etc/rc.d/rc.gsad.new
 
 mkdir -p $PKG/install
 cat $CWD/slack-desc > $PKG/install/slack-desc

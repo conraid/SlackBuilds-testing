@@ -1,0 +1,34 @@
+From 03149d73cfddac3334b6f8aaa515f448714dde64 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Bj=C3=B6rn=20Ricks?= <bjoern.ricks@greenbone.net>
+Date: Wed, 20 Jul 2022 07:39:45 +0200
+Subject: [PATCH] Fix: Require libpaho for mqtt support
+
+MQTT support is required for openvas-scanner. It would be possible to
+just not build the mqtt support in gvm-libs but in that case it would
+be required to check in openvas-scanner if gvm-libs has mqtt support.
+Therefore it is easier to always build gvm-libs with mqtt support.
+
+Closes #694
+
+(cherry picked from commit 7104b434635762ea598bb08b901248ee0fb5a882)
+---
+ util/CMakeLists.txt | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+diff --git a/util/CMakeLists.txt b/util/CMakeLists.txt
+index b0f2000b..65bb3ced 100644
+--- a/util/CMakeLists.txt
++++ b/util/CMakeLists.txt
+@@ -51,11 +51,10 @@ pkg_check_modules (REDIS REQUIRED hiredis>=0.10.1)
+ pkg_check_modules (LIBXML2 REQUIRED libxml-2.0>=2.0)
+ 
+ # for mqtt
+-# Optional for now because lib is currently not in debian buster stable.
+ find_library(LIBPAHO paho-mqtt3c)
+ message (STATUS "Looking for paho-mqtt3c ... ${LIBPAHO}")
+ if (NOT LIBPAHO)
+-  message (STATUS "libpaho-mqtt3c is required for MQTTv5 support.")
++  message (SEND_ERROR "libpaho-mqtt3c is required for MQTTv5 support.")
+ else (LIBPAHO)
+   set (LIBPAHO_LDFLAGS "paho-mqtt3c")
+   add_definitions (-DHAVE_MQTT=1)

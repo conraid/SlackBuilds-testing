@@ -1,0 +1,17 @@
+
+Slackware Current Repository by Conraid
+
+======================================================================
+
+paho-mqtt-c (C MQTT Client Library)
+
+This code builds libraries which enable applications to connect to an
+MQTT broker to publish messages, and to subscribe to topics and
+receive published messages.
+
+Synchronous and various asynchronous programming models are
+supported.
+
+HOME: https://eclipse.github.io/paho.mqtt.c/MQTTClient/html/
+
+======================================================================

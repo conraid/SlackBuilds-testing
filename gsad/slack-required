@@ -1,0 +1,7 @@
+libmicrohttpd
+gvm-libs
+hiredis
+redis
+babel-loader
+python-polib
+xmltoman

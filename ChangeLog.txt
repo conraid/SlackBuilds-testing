@@ -1,3 +1,15 @@
+Tue Sep 6 15:21:26 UTC 2022
+displaycal-3.9.7-x86_64-1cf.txz:  Upgraded.
+gvm-tools-22.9.0-x86_64-1cf.txz:  Upgraded.
+iaito-5.7.2-x86_64-1cf.txz:  Added.
+libdaq-3.0.9-x86_64-1cf.txz:  Upgraded.
+ospd-openvas-22.4.2-x86_64-1cf.txz:  Upgraded.
+pontos-22.8.1-x86_64-1cf.txz:  Upgraded.
+python-gvm-22.9.0-x86_64-1cf.txz:  Upgraded.
+radare2-5.7.6-x86_64-1cf.txz:  Added.
+snort3-3.1.40.0-x86_64-1cf.txz:  Upgraded.
+snort3_extra-3.1.40.0-x86_64-1cf.txz:  Upgraded.
++--------------------------+
 Mon Aug 1 16:12:15 UTC 2022
 displaycal-3.9.6-x86_64-1cf.txz:  Added.
 gsa-22.4.0-x86_64-1cf.txz:  Upgraded.

@@ -1,10 +1,10 @@
 SLACKBUILD NAME: displaycal
 SLACKBUILD LOCATION: ./displaycal
-SLACKBUILD FILES: PKGNOTE README displaycal.SlackBuild displaycal.info patches/138.patch slack-desc slack-required
-SLACKBUILD VERSION: 3.9.6
-SLACKBUILD REQUIRED: argyllcms numpy colord-kde wxpython python-send2trash python-wheel  pychromecast  python-casttube  python-ifaddr  python-netifaces  python-zeroconf
-SLACKBUILD DOWNLOAD: https://github.com/eoyilmaz/displaycal-py3/releases/download/3.9.6/DisplayCAL-3.9.6.tar.gz
-SLACKBUILD MD5SUM: 5e82d8742452ea1e567b12edec268965
+SLACKBUILD FILES: PKGNOTE README displaycal.SlackBuild displaycal.info slack-desc slack-required
+SLACKBUILD VERSION: 3.9.7
+SLACKBUILD REQUIRED: argyllcms numpy colord-kde wxgtk python-send2trash python-wheel  pychromecast  python-casttube  python-ifaddr  python-netifaces  python-zeroconf
+SLACKBUILD DOWNLOAD: https://github.com/eoyilmaz/displaycal-py3/releases/download/3.9.7/DisplayCAL-3.9.7.tar.gz
+SLACKBUILD MD5SUM: 002688f2c9b39038515ff5fe35aa372c
 SLACKBUILD SHORT DESCRIPTION:  displaycal (DisplayCAL Modernization Project)
 
 SLACKBUILD NAME: docker-compose
@@ -73,10 +73,10 @@ SLACKBUILD SHORT DESCRIPTION:  gvm-libs (Greenbone Vulnerability Management Libr
 SLACKBUILD NAME: gvm-tools
 SLACKBUILD LOCATION: ./gvm-tools
 SLACKBUILD FILES: README SLACKWARE.README gvm-tools.SlackBuild gvm-tools.info slack-desc slack-required
-SLACKBUILD VERSION: 22.6.1
+SLACKBUILD VERSION: 22.9.0
 SLACKBUILD REQUIRED: gvm-libs python-gvm
-SLACKBUILD DOWNLOAD: https://pypi.python.org/packages/source/g/gvm-tools/gvm-tools-22.6.1.tar.gz
-SLACKBUILD MD5SUM: 54a0ce1542008f43e84885c570b50dbb
+SLACKBUILD DOWNLOAD: https://pypi.python.org/packages/source/g/gvm-tools/gvm-tools-22.9.0.tar.gz
+SLACKBUILD MD5SUM: 87983e2180314d322c381e541a4520d7
 SLACKBUILD SHORT DESCRIPTION:  gvm-tools (Greenbone Vulnerability Management Tools)
 
 SLACKBUILD NAME: gvmd
@@ -87,6 +87,15 @@ SLACKBUILD REQUIRED: gvm-libs hiredis redis postgresql libbsd
 SLACKBUILD DOWNLOAD: https://github.com/greenbone/gvmd/archive/v22.4.0/gmvd-22.4.0.tar.gz
 SLACKBUILD MD5SUM: f98a21f9a2157784394387962f06411c
 SLACKBUILD SHORT DESCRIPTION:  gvmd (Greenbone Vulnerability Manager)
+
+SLACKBUILD NAME: iaito
+SLACKBUILD LOCATION: ./iaito
+SLACKBUILD FILES: README doinst.sh iaito.SlackBuild iaito.info slack-desc slack-required
+SLACKBUILD VERSION: 5.7.2
+SLACKBUILD REQUIRED: radare2
+SLACKBUILD DOWNLOAD: https://github.com/radareorg/iaito/archive/5.7.2/iaito-5.7.2.tar.gz
+SLACKBUILD MD5SUM: 84b07e8c39fb8c193ed29cae04ebb564
+SLACKBUILD SHORT DESCRIPTION:  iaito (Official QT frontend of radare2)
 
 SLACKBUILD NAME: libdaq
 SLACKBUILD LOCATION: ./libdaq
@@ -118,10 +127,10 @@ SLACKBUILD SHORT DESCRIPTION:  openvas-scanner (OpenVAS remote network security 
 SLACKBUILD NAME: ospd-openvas
 SLACKBUILD LOCATION: ./ospd-openvas
 SLACKBUILD FILES: README ospd-openvas.SlackBuild ospd-openvas.info slack-desc slack-required
-SLACKBUILD VERSION: 22.4.0
+SLACKBUILD VERSION: 22.4.2
 SLACKBUILD REQUIRED: ospd openvas-scanner python-redis
-SLACKBUILD DOWNLOAD: https://pypi.python.org/packages/source/o/ospd-openvas/ospd-openvas-22.4.0.tar.gz
-SLACKBUILD MD5SUM: 4fc73b7deab49f97954d288af520a2c1
+SLACKBUILD DOWNLOAD: https://pypi.python.org/packages/source/o/ospd-openvas/ospd-openvas-22.4.2.tar.gz
+SLACKBUILD MD5SUM: 7f18dcddedae8c51eaa305aafd0b55e9
 SLACKBUILD SHORT DESCRIPTION:  ospd-openvas (osp server to openvas scanner)
 
 SLACKBUILD NAME: ospd
@@ -154,10 +163,10 @@ SLACKBUILD SHORT DESCRIPTION:  pidgin-facebook (Facebook protocol plugin for lib
 SLACKBUILD NAME: pontos
 SLACKBUILD LOCATION: ./pontos
 SLACKBUILD FILES: README pontos.SlackBuild pontos.info slack-desc
-SLACKBUILD VERSION: 22.8.0
+SLACKBUILD VERSION: 22.8.1
 SLACKBUILD REQUIRED: 
-SLACKBUILD DOWNLOAD: https://pypi.python.org/packages/source/p/pontos/pontos-22.8.0.tar.gz
-SLACKBUILD MD5SUM: 35c5f1b67de1ae878e2d3c4b3ad66eb8
+SLACKBUILD DOWNLOAD: https://pypi.python.org/packages/source/p/pontos/pontos-22.8.1.tar.gz
+SLACKBUILD MD5SUM: 24b43b8a61e7806cb0dbe74c6d99d114
 SLACKBUILD SHORT DESCRIPTION:  pontos (Greenbone Python Utilities and Tools )
 
 SLACKBUILD NAME: python-docker
@@ -181,11 +190,20 @@ SLACKBUILD SHORT DESCRIPTION:  python-dockerpty
 SLACKBUILD NAME: python-gvm
 SLACKBUILD LOCATION: ./python-gvm
 SLACKBUILD FILES: README SLACKWARE.README python-gvm.SlackBuild python-gvm.info slack-desc slack-required
-SLACKBUILD VERSION: 22.7.0
+SLACKBUILD VERSION: 22.9.0
 SLACKBUILD REQUIRED: paramiko lxml defusedxml gvm-libs
-SLACKBUILD DOWNLOAD: https://pypi.python.org/packages/source/p/python-gvm/python-gvm-22.7.0.tar.gz
-SLACKBUILD MD5SUM: af6d113151a5bd4eed63e3feeaa2a8ac
+SLACKBUILD DOWNLOAD: https://pypi.python.org/packages/source/p/python-gvm/python-gvm-22.9.0.tar.gz
+SLACKBUILD MD5SUM: ed802695b2f6fefc03eb1339f3b6482a
 SLACKBUILD SHORT DESCRIPTION:  python-gvm (GVM Python Library)
+
+SLACKBUILD NAME: radare2
+SLACKBUILD LOCATION: ./radare2
+SLACKBUILD FILES: README radare2.SlackBuild radare2.info slack-desc slack-required
+SLACKBUILD VERSION: 5.7.6
+SLACKBUILD REQUIRED: capstone tree-sitter
+SLACKBUILD DOWNLOAD: https://github.com/radareorg/radare2/archive/5.7.6/radare2-5.7.6.tar.gz
+SLACKBUILD MD5SUM: a3b91a603db3e35b0f65a4b1f4f22720
+SLACKBUILD SHORT DESCRIPTION:  radare2 (Libre Unix-Like Reverse Engineering Framework)
 
 SLACKBUILD NAME: snort-openappid
 SLACKBUILD LOCATION: ./snort-openappid
@@ -199,18 +217,18 @@ SLACKBUILD SHORT DESCRIPTION:  snort-openappid (Open Detector Package)
 SLACKBUILD NAME: snort3
 SLACKBUILD LOCATION: ./snort3
 SLACKBUILD FILES: README SLACKWARE.README doinst.sh files/local.lua files/rc.snort rc.snort3 slack-desc slack-required snort3.SlackBuild snort3.info
-SLACKBUILD VERSION: 3.1.38.0
+SLACKBUILD VERSION: 3.1.40.0
 SLACKBUILD REQUIRED: flatbuffers libdaq libdnet luajit hwloc hyperscan libsafec snort-openappid
-SLACKBUILD DOWNLOAD: https://github.com/snort3/snort3/archive/3.1.38.0/snort3-3.1.38.0.tar.gz
-SLACKBUILD MD5SUM: e9e732865090426d136f9f932b6f719a
+SLACKBUILD DOWNLOAD: https://github.com/snort3/snort3/archive/3.1.40.0/snort3-3.1.40.0.tar.gz
+SLACKBUILD MD5SUM: 85f1f869d9d680f16fcc0ab358a2a16e
 SLACKBUILD SHORT DESCRIPTION:  snort3 (Intrusion Detection and Prevention System)
 
 SLACKBUILD NAME: snort3_extra
 SLACKBUILD LOCATION: ./snort3_extra
 SLACKBUILD FILES: README SLACKWARE.README doinst.sh slack-desc slack-required snort3_extra.SlackBuild snort3_extra.info
-SLACKBUILD VERSION: 3.1.38.0
+SLACKBUILD VERSION: 3.1.40.0
 SLACKBUILD REQUIRED: snort3
-SLACKBUILD DOWNLOAD: https://github.com/snort3/snort3_extra/archive/3.1.38.0/snort3_extra-3.1.38.0.tar.gz
-SLACKBUILD MD5SUM: 464cc8983f043585b573cb2e1fd59b3d
+SLACKBUILD DOWNLOAD: https://github.com/snort3/snort3_extra/archive/3.1.40.0/snort3_extra-3.1.40.0.tar.gz
+SLACKBUILD MD5SUM: 2cf3c88d329208e43355a6ef03912216
 SLACKBUILD SHORT DESCRIPTION:  snort_extra (Snort++ Extras)
 

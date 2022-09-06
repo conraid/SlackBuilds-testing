@@ -8,6 +8,7 @@ gsad/gsad.SlackBuild
 gvm-libs/gvm-libs.SlackBuild
 gvm-tools/gvm-tools.SlackBuild
 gvmd/gvmd.SlackBuild
+iaito/iaito.SlackBuild
 libdaq/libdaq.SlackBuild
 mping/mping.SlackBuild
 openvas-scanner/openvas-scanner.SlackBuild
@@ -19,6 +20,7 @@ pontos/pontos.SlackBuild
 python-docker/python-docker.SlackBuild
 python-dockerpty/python-dockerpty.SlackBuild
 python-gvm/python-gvm.SlackBuild
+radare2/radare2.SlackBuild
 snort-openappid/snort-openappid.SlackBuild
 snort3/snort3.SlackBuild
 snort3_extra/snort3_extra.SlackBuild
