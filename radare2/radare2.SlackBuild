@@ -2,7 +2,7 @@
 #
 # Slackware build script for radare2
 #
-# Copyright 2022 Corrado Franco (https://corradofranco.it)
+# Copyright 2022-2023 Corrado Franco (https://corradofranco.it)
 # All rights reserved.
 #
 # This program is free software: you can redistribute it and/or modify
@@ -31,7 +31,7 @@ cd $(dirname $0) ; CWD=$(pwd)
 
 PRGNAM=radare2
 PKGNAM=$(echo $PRGNAM | tr A-Z a-z)
-SRCVERSION=5.7.6
+SRCVERSION=5.8.2
 VERSION=$(echo $SRCVERSION | tr - _)
 BUILD=${BUILD:-1}
 TAG=${TAG:-cf}
@@ -39,7 +39,7 @@ TMP=${TMP:-/tmp/pkg}
 PKG=$TMP/package-$PKGNAM
 OUTPUT=${OUTPUT:-/tmp}
 
-DOCFILES="*.md COPYING*" 
+DOCFILES="*.md COPYING*"
 
 if [ -z ${ARCH:=""} ]; then
   case "$( uname -m )" in
@@ -98,31 +98,41 @@ if [ -e $CWD/patches/ ]; then
   fi
 fi
 
-LDFLAGS="-L/usr/lib${LIBDIRSUFFIX}" \
-CFLAGS="$SLKCFLAGS" \
-CXXFLAGS="$SLKCFLAGS" \
-./configure \
-  --prefix=/usr \
-  --libdir=/usr/lib${LIBDIRSUFFIX} \
-  --sysconfdir=/etc \
-  --localstatedir=/var \
-  --runstatedir=/run \
-  --mandir=/usr/man \
-  --infodir=/usr/info \
-  --docdir=/usr/doc/$PKGNAM-$VERSION \
-  --enable-static=no \
-  --enable-shared=yes \
-  --with-capstone5 \
-  --with-syscapstone \
-  --with-syslz4 \
-  --with-syszip \
-  --with-sysxxhash \
-  --with-openssl \
-  --host=$ARCH-slackware-linux \
-  --build=$ARCH-slackware-linux
+export CFLAGS="$SLKCFLAGS"
+export CXXFLAGS="$SLKCFLAGS"
+mkdir meson-build
+cd meson-build
+meson setup \
+  --prefix          /usr \
+  --libdir          lib${LIBDIRSUFFIX} \
+  --libexecdir      /usr/libexec \
+  --sysconfdir      /etc \
+  --localstatedir   /var \
+  --mandir          /usr/man \
+  --infodir         /usr/info \
+  --bindir          /usr/bin \
+  --sbindir         /usr/sbin \
+  --includedir      /usr/include \
+  --datadir         /usr/share \
+  --buildtype       release \
+  --default-library shared \
+  --buildtype       plain \
+  --auto-features   enabled \
+  --wrap-mode       nodownload \
+  -D                b_lto=true \
+  -D                b_pie=true \
+  -D                cli=enabled \
+  -D                use_ssl=true \
+  -D                use_sys_zip=true \
+  -D                use_sys_zlib=true \
+  -D                use_sys_lz4=true \
+  -D                use_sys_xxhash=true \
+  -D                enable_tests=false \
+  ..
 
-make
-make DESTDIR=$PKG install
+ninja
+DESTDIR=$PKG ninja install
+cd ..
 
 # Don't ship .la files:
 rm -f $PKG/{,usr/}lib${LIBDIRSUFFIX}/*.la

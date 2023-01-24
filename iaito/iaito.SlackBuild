@@ -2,7 +2,7 @@
 #
 # Slackware build script for iaito
 #
-# Copyright 2022 Corrado Franco (https://corradofranco.it)
+# Copyright 2022-2023 Corrado Franco (https://corradofranco.it)
 # All rights reserved.
 #
 # This program is free software: you can redistribute it and/or modify
@@ -30,7 +30,7 @@ cd $(dirname $0) ; CWD=$(pwd)
 
 PRGNAM=iaito
 PKGNAM=$(echo $PRGNAM | tr A-Z a-z)
-SRCVERSION=5.7.2
+SRCVERSION=5.8.0
 VERSION=$(echo $SRCVERSION | tr - _)
 BUILD=${BUILD:-1}
 TAG=${TAG:-cf}
@@ -101,7 +101,7 @@ if [ -e $CWD/patches/ ]; then
   fi
 fi
 
-sed -e 's|usr/local|usr|g' -i Makefile -i configure -i build.sh -i src/Iaito.pro -i src/common/ResourcePaths.cpp -i src/lib_radare2.pri
+sed -e 's|usr/local|usr|g' -i Makefile -i configure -i src/Iaito.pro -i src/common/ResourcePaths.cpp -i src/lib_radare2.pri -i src/translations/Makefile
 
 LDFLAGS="-L/usr/lib${LIBDIRSUFFIX}" \
 CFLAGS="$SLKCFLAGS" \

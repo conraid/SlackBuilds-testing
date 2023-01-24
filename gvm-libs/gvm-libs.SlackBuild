@@ -2,7 +2,7 @@
 #
 # Slackware build script for gvm libraries
 #
-# Copyright 2014-2022 Corrado Franco (https://corradofranco.it)
+# Copyright 2014-2023 Corrado Franco (https://corradofranco.it)
 # All rights reserved.
 #
 # This program is free software: you can redistribute it and/or modify
@@ -30,7 +30,7 @@ set -eu
 cd $(dirname $0) ; CWD=$(pwd)
 
 PKGNAM=gvm-libs
-VERSION=22.4.0
+VERSION=22.4.2
 BUILD=${BUILD:-1}
 TAG=${TAG:-cf}
 TMP=${TMP:-/tmp/pkg}
@@ -107,7 +107,6 @@ cmake \
   -DCMAKE_INSTALL_PREFIX=/usr \
   -DSYSCONF_INSTALL_DIR=/etc \
   -DLOCALSTATEDIR=/var \
-  -DGVM_PID_DIR=/run/gvm \
   ..
 
 make
