@@ -1,3 +1,14 @@
+Fri Feb 3 13:48:16 UTC 2023
+gvm-tools-23.2.0-x86_64-1cf.txz:  Upgraded.
+iaito-5.8.2-x86_64-1cf.txz:  Upgraded.
+openvas-scanner-22.4.1-x86_64-2cf.txz:  Rebuilt.
+    - Fix man pages.
+ospd-openvas-22.4.5-x86_64-1cf.txz:  Upgraded.
+pontos-23.2.1-x86_64-1cf.txz:  Upgraded.
+python-gvm-23.2.0-x86_64-1cf.txz:  Upgraded.
+snort3-3.1.53.0-x86_64-1cf.txz:  Upgraded.
+snort3_extra-3.1.53.0-x86_64-1cf.txz:  Upgraded.
++--------------------------+
 Tue Jan 24 15:17:45 UTC 2023
 displaycal-3.9.10-x86_64-1cf.txz:  Upgraded.
 gsa-22.4.1-x86_64-1cf.txz:  Upgraded.
