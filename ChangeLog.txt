@@ -1,3 +1,26 @@
+Tue Aug 8 11:17:29 UTC 2023
+displaycal-3.9.10-x86_64-1cf.txz:Removed.
+    - It's in a standard repository.
+docker-19.03.14-x86_64-1cf.txz:  Removed.
+docker-compose-1.28.5-x86_64-1cf.txz: Removed.
+docker-proxy-264bffc-x86_64-1cf.txz:  Removed.
+docker-pycreds-0.4.0-x86_64-3cf.txz:  Removed.
+iaito-5.8.8-x86_64-1cf.txz:  Upgraded.
+gsa-22.5.3-x86_64-1cf.txz:  Removed.
+gsad-22.5.1-x86_64-1cf.txz:  Removed.
+gvm-libs-22.7.0-x86_64-1cf.txz:  Removed.
+gvm-tools-23.4.0-x86_64-1cf.txz:  Removed.
+gvmd-22.6.0-x86_64-1cf.txz:  Removed.
+libdaq-3.0.12-x86_64-1cf.txz:  Removed.
+openvas-scanner-22.7.3-x86_64-1cf.txz:  Removed.
+ospd-openvas-22.5.4-x86_64-1cf.txz:  Removed.
+pontos-23.7.7-x86_64-1cf.txz:  Removed.
+python-gvm-23.5.1-x86_64-1cf.txz:  Removed.
+radare2-5.8.8-x86_64-1cf.txz:  Upgraded.
+snort-openappid-33380-x86_64-1cf.txz:  Removed.
+snort3-3.1.67.0-x86_64-1cf.txz:  Removed.
+snort3_extra-3.1.67.0-x86_64-1cf.txz:  Removed.
++--------------------------+
 Fri Feb 3 13:48:16 UTC 2023
 gvm-tools-23.2.0-x86_64-1cf.txz:  Upgraded.
 iaito-5.8.2-x86_64-1cf.txz:  Upgraded.
