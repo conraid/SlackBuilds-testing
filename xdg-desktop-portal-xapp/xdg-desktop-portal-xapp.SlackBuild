@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Slackware build script for remmina
+# Slackware build script for xdg-desktop-portal-xapp
 #
 # Copyright 2025 Corrado Franco (https://corradofranco.it)
 # All rights reserved.
@@ -29,17 +29,17 @@ set -euo pipefail
 
 cd $(dirname $0) ; CWD=$(pwd)
 
-PRGNAM=Remmina
+PRGNAM=xdg-desktop-portal-xapp
 PKGNAM=${PRGNAM,,}
-SRCVERSION=1.4.40
+SRCVERSION=1.1.1
 VERSION="${SRCVERSION//-/_}"
-BUILD=${BUILD:-2}
+BUILD=${BUILD:-1}
 TAG=${TAG:-cf}
 TMP=${TMP:-/tmp/pkg}
 PKG=$TMP/package-$PKGNAM
 OUTPUT=${OUTPUT:-/tmp}
 
-DOCFILES="*.md AUTHORS COPYING ChangeLog LICENSE*"
+DOCFILES="COPYING *.md"
 
 if [ -z ${ARCH:=""} ]; then
   case "$( uname -m )" in
@@ -71,9 +71,9 @@ fi
 rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
-rm -rf $PRGNAM-v$SRCVERSION
-tar xvf $CWD/$PRGNAM-v$SRCVERSION.tar.bz2
-cd $PRGNAM-v$SRCVERSION
+rm -rf $PRGNAM-$SRCVERSION
+tar xvf $CWD/$PRGNAM-$SRCVERSION.tar.gz || tar xvf $CWD/$SRCVERSION.tar.gz
+cd $PRGNAM-$SRCVERSION
 
 chown -R root:root .
 find . \
@@ -95,32 +95,34 @@ if [ -e $CWD/patches/ ]; then
   fi
 fi
 
-# Fixed man path.
-sed -i 's|\${CMAKE_INSTALL_FULL_MANDIR}/man1|/usr/man/man1|g' src/CMakeLists.txt data/desktop/CMakeLists.txt
-
-mkdir -p build
-cd build
-cmake -Wno-dev \
-  -DCMAKE_C_FLAGS_RELEASE:STRING="$SLKCFLAGS -DNDEBUG -Wno-implicit-function-declaration" \
-  -DCMAKE_CXX_FLAGS_RELEASE:STRING="$SLKCFLAGS -DNDEBUG" \
-  -DCMAKE_BUILD_TYPE=Release \
-  -DCMAKE_INSTALL_PREFIX=/usr \
-  -DCMAKE_INSTALL_DOCDIR=/usr/doc/$PKGNAM-$VERSION \
-  -DCMAKE_INSTALL_FULL_MANDIR=/usr/man/ \
-  -DWITH_AVAHI=ON \
-  -DWITH_TELEPATHY=OFF \
-  -DWITH_VTE=ON \
-  -DWITH_APPINDICATOR=OFF \
-  -DWITH_WWW=ON \
-  -DWITH_KF5WALLET=ON \
-  -DWITH_NEWS=OFF \
-  -DWITH_X2GO=OFF \
-  -DWITH_GVNC=ON \
-  -DWITH_MANPAGES=ON \
+export CFLAGS="$SLKCFLAGS"
+export CXXFLAGS="$SLKCFLAGS"
+mkdir meson-build
+cd meson-build
+meson setup \
+  --prefix          /usr \
+  --libdir          lib${LIBDIRSUFFIX} \
+  --libexecdir      /usr/libexec \
+  --sysconfdir      /etc \
+  --localstatedir   /var \
+  --mandir          /usr/man \
+  --infodir         /usr/info \
+  --bindir          /usr/bin \
+  --sbindir         /usr/sbin \
+  --includedir      /usr/include \
+  --datadir         /usr/share \
+  --buildtype       release \
+  --default-library shared \
+  --buildtype       plain \
+  --auto-features   enabled \
+  --wrap-mode       nodownload \
+  -D                b_lto=true \
+  -D                b_pie=true \
+  -D                systemduserunitdir=disabled \
   ..
 
-make
-make DESTDIR=$PKG install
+ninja
+DESTDIR=$PKG ninja install
 cd ..
 
 # Don't ship .la files:
@@ -140,7 +142,6 @@ cat $CWD/$PKGNAM.SlackBuild > $PKG/usr/doc/$PKGNAM-$VERSION/$PKGNAM.SlackBuild
 
 mkdir -p $PKG/install
 cat $CWD/slack-desc > $PKG/install/slack-desc
-cat $CWD/doinst.sh > $PKG/install/doinst.sh
 
 cd $PKG
 /sbin/makepkg -l y -c n $OUTPUT/$PKGNAM-$VERSION-$ARCH-$BUILD$TAG.${PKGTYPE:-txz}

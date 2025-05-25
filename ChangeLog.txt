@@ -1,3 +1,8 @@
+Sun May 25 17:47:58 UTC 2025
+remmina-1.4.40-x86_64-2cf.txz:  Rebuilt.
+xdg-desktop-portal-wlr-0.7.1-x86_64-1cf.txz:  Added.
+xdg-desktop-portal-xapp-1.1.1-x86_64-1cf.txz:  Added.
++--------------------------+
 Sun May 25 14:23:38 UTC 2025
 clapper-0.8.0-x86_64-1cf.txz:  Added.
 drawing-1.0.2-x86_64-1cf.txz:  Added.
