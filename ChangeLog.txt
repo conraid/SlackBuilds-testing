@@ -1,3 +1,9 @@
+Sun May 25 14:23:38 UTC 2025
+clapper-0.8.0-x86_64-1cf.txz:  Added.
+drawing-1.0.2-x86_64-1cf.txz:  Added.
+libpeas-2.0.7-x86_64-1cf.txz:  Added.
+remmina-1.4.40-x86_64-1cf.txz:  Added.
++--------------------------+
 Thu Jan 2 12:11:49 UTC 2025
 Reset repository
 +--------------------------+
