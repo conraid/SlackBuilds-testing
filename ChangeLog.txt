@@ -1,3 +1,6 @@
+Sun May 25 18:36:55 UTC 2025
+wayfarer-1.2.4-x86_64-1cf.txz:  Added.
++--------------------------+
 Sun May 25 17:47:58 UTC 2025
 remmina-1.4.40-x86_64-2cf.txz:  Rebuilt.
 xdg-desktop-portal-wlr-0.7.1-x86_64-1cf.txz:  Added.
