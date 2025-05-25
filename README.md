@@ -41,5 +41,5 @@ All scrips are released under the GPL License.
 
 ## Links
 
-Compiled packages are on http://slack.conraid.net/repository/ or https://sourceforge.net/projects/slackers/
+Compiled packages are on https://slackers.it/repository/slackware64-current-testing/
 
