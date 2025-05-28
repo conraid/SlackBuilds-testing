@@ -1,3 +1,21 @@
+Wed May 28 16:24:27 UTC 2025
+clapper-0.8.0-x86_64-1cf.txz:  Removed.
+  Moved to standard repository.
+drawing-1.0.2-x86_64-1cf.txz:  Removed.
+  Moved to standard repository.
+libpeas-2.0.7-x86_64-1cf.txz:  Removed.
+  Moved to standard repository.
+pdfslicer-1.8.8-x86_64-1cf.txz:  Removed.
+  Moved to standard repository.
+remmina-1.4.40-x86_64-1cf.txz:  Removed.
+  Moved to standard repository.
+wayfarer-1.2.4-x86_64-1cf.txz:  Removed.
+  Moved to standard repository.
+xdg-desktop-portal-wlr-0.7.1-x86_64-1cf.txz:  Removed.
+  Moved to standard repository.
+xdg-desktop-portal-xapp-1.1.1-x86_64-1cf.txz:  Removed.
+  Moved to standard repository.
++--------------------------+
 Sun May 25 19:58:03 UTC 2025
 pdfslicer-1.8.8-x86_64-1cf.txz:  Added.
 +--------------------------+
@@ -19,7 +37,7 @@ Thu Jan 2 12:11:49 UTC 2025
 Reset repository
 +--------------------------+
 Tue Aug 8 11:17:29 UTC 2023
-displaycal-3.9.10-x86_64-1cf.txz:Removed.
+displaycal-3.9.10-x86_64-1cf.txz:  Removed.
     - It's in a standard repository.
 docker-19.03.14-x86_64-1cf.txz:  Removed.
 docker-compose-1.28.5-x86_64-1cf.txz: Removed.
