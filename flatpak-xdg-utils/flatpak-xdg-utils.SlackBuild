@@ -33,7 +33,7 @@ PRGNAM=flatpak-xdg-utils
 PKGNAM=${PRGNAM,,}
 SRCVERSION=1.0.6
 VERSION="${SRCVERSION//-/_}"
-BUILD=${BUILD:-1}
+BUILD=${BUILD:-2}
 TAG=${TAG:-cf}
 TMP=${TMP:-/tmp/pkg}
 PKG=$TMP/package-$PKGNAM
@@ -129,6 +129,12 @@ rm -f $PKG/{,usr/}lib${LIBDIRSUFFIX}/*.la
 
 find $PKG | xargs file | grep -e "executable" -e "shared object" | grep ELF | cut -f 1 -d : | xargs -r strip --strip-unneeded 2> /dev/null || true
 find $PKG | xargs file | grep "current ar archive" | cut -f 1 -d : | xargs -r strip -g 2> /dev/null || true
+
+# Create symlinks
+mkdir -p "$PKG/usr/bin"
+ln -s "/usr/lib$LIBDIRSUFFIX/$PKGNAM/flatpak-spawn" "$PKG/usr/bin/flatpak-spawn"
+ln -s "/usr/lib$LIBDIRSUFFIX/$PKGNAM/xdg-open" "$PKG/usr/bin/flatpak-xdg-open"
+ln -s "/usr/lib$LIBDIRSUFFIX/$PKGNAM/xdg-email" "$PKG/usr/bin/flatpak-xdg-email"
 
 if [ -d $PKG/usr/man ]; then
   find $PKG/usr/man -type f -exec chmod 644 {} \; -exec gzip -9 {} \;
