@@ -1,3 +1,7 @@
+Wed Aug 20 14:35:51 UTC 2025
+cronie-1.7.2-x86_64-1cf.txz:  Added.
+  For testing purposes only.
++--------------------------+
 Sat Jun 21 08:14:04 UTC 2025
 flatpak-xdg-utils-1.0.6-x86_64-2cf.txz:  Removed.
   Moved to main repository.

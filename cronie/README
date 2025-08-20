@@ -1,0 +1,15 @@
+
+Slackware Current Repository by Conraid
+
+======================================================================
+
+cronie (The standard UNIX cron daemon)
+
+Cronie contains the standard UNIX daemon crond that runs specified
+programs at scheduled times and related tools. It is based on the
+original cron and has security and configuration enhancements like
+the ability to use pam and SELinux.
+
+HOME: https://github.com/cronie-crond/cronie
+
+======================================================================
