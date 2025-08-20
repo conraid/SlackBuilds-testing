@@ -13,7 +13,7 @@ cronie: programs at scheduled times and related tools. It is based on the
 cronie: original cron and has security and configuration enhancements like
 cronie: the ability to use pam and SELinux.
 cronie:
-cronie:
+cronie: This package conflicts with dcron, standard cron package on Slakware.
 cronie:
 cronie:
 cronie:
