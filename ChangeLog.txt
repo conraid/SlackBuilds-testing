@@ -1,3 +1,11 @@
+Tue Jan 6 17:13:44 UTC 2026
+cronie-1.7.2-x86_64-2cf.txz:  Added.
+  Moved from extra.
+luminance-hdr-2.6.1.1-x86_64-21cf.txz:  Added.
+  Moved from extra.
+qemu-guest-agent-10.1.2-x86_64-1cf.txz:  Added.
+  Moved from extra.
++--------------------------+
 Wed Nov 5 11:00:03 UTC 2025
 cronie-1.7.2-x86_64-2cf.txz:  Removed.
   Moved to extra repository.
