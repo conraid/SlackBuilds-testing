@@ -1,0 +1,30 @@
+--- ./src/daemon/start-pulseaudio-x11.in.orig	2024-01-12 11:22:09.000000000 -0600
++++ ./src/daemon/start-pulseaudio-x11.in	2024-11-30 13:40:45.840919583 -0600
+@@ -36,6 +36,27 @@
+     esac
+ fi
+ 
++# Test autospawn, if requested.
++# If /etc/xdg/autostart/pulseaudio.desktop is disabled, don't bother.
++if ! grep -q "^Hidden=true$" /etc/xdg/autostart/pulseaudio.desktop ; then
++  # Are we root?
++  if [ "$UID" = "0" ]; then
++    # First, let's test if we even want autospawn:
++    if grep -q "^allow-autospawn-for-root = yes$" /etc/pulse/client.conf 2> /dev/null ; then
++      # We do want autospawn, so let's test if it works, and start pulseaudio
++      # manually if it does not:
++      @PACTL_BINARY@ info > /dev/null 2>&1 || @PA_BINARY@ --start "$@"
++    fi
++  else # we are not root
++    # First, let's test if we even want autospawn:
++    if grep -q "^autospawn = yes$" /etc/pulse/client.conf 2> /dev/null ; then
++      # We do want autospawn, so let's test if it works, and start pulseaudio
++      # manually if it does not:
++      @PACTL_BINARY@ info > /dev/null 2>&1 || @PA_BINARY@ --start "$@"
++    fi
++  fi
++fi
++
+ if [ x"$DISPLAY" != x ] ; then
+ 
+     @PACTL_BINARY@ load-module module-x11-publish "display=$DISPLAY xauthority=$XAUTHORITY" > /dev/null

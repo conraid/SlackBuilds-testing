@@ -1,0 +1,15 @@
+
+Slackware Current Repository by Conraid
+
+======================================================================
+
+libpulse (PulseAudio client)
+
+Pulseaudio is a networked low-latency sound server intended to be an
+improved replacement for the Enlightened Sound Daemon (EsounD).
+
+This package contains the PulseAudio client library.
+
+HOME: https://freedesktop.org/software/pulseaudio/
+
+======================================================================
