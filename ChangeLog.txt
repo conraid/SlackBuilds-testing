@@ -1,3 +1,8 @@
+Mon Feb 23 13:24:43 UTC 2026
+libpulse-17.0-x86_64-1cf.txz:  Added.
+	Thanks to rizalmat.
+qemu-guest-agent-10.2.1-x86_64-1cf.txz:  Upgraded.
++--------------------------+
 Tue Jan 6 17:13:44 UTC 2026
 cronie-1.7.2-x86_64-2cf.txz:  Added.
   Moved from extra.
