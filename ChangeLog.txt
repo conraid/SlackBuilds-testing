@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+Wed Mar 18 08:40:20 UTC 2026
+qemu-guest-agent-10.2.1-x86_64-1cf.txz:  Removed.
+	Now in current.
++--------------------------+
+>>>>>>> b7c9690 (sync with repository testing")
 Mon Feb 23 13:24:43 UTC 2026
 libpulse-17.0-x86_64-1cf.txz:  Added.
 	Thanks to rizalmat.
